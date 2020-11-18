@@ -1,0 +1,32 @@
+<!-- edited with XMLSpy v2018 (x64) (http://www.altova.com) by Pavel Tachecí (DHI a.s.) -->
+<thresholdValueSets xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/thresholdValueSets.xsd">
+	<thresholdValueSet id="Q" name="Discharge">
+		<stage>
+	  </stage>
+		<discharge>
+			<levelThresholdValue>
+				<levelThresholdId>spa1</levelThresholdId>
+				<valueFunction>@flow_spa1@</valueFunction>
+			</levelThresholdValue>
+			<levelThresholdValue>
+				<levelThresholdId>spa2</levelThresholdId>
+				<valueFunction>@flow_spa2@</valueFunction>
+			</levelThresholdValue>
+			<levelThresholdValue>
+				<levelThresholdId>spa3</levelThresholdId>
+				<valueFunction>@flow_spa3@</valueFunction>
+			</levelThresholdValue>
+			<timeSeriesSet>
+				<moduleInstanceId>importDFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>Q.obs</parameterId>
+			<locationSetId>usgs_gates</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-10" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+			</timeSeriesSet>			
+		</discharge>
+	</thresholdValueSet>
+</thresholdValueSets>

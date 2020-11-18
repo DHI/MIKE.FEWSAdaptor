@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DBDE6AB-DED6-49CC-AB3E-119FE4C2CE45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FewsCommon</RootNamespace>
+    <AssemblyName>FewsCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr4.Runtime, Version=4.4.0.0, Culture=neutral, PublicKeyToken=bb1075973a9370c4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Math.Expression.18.0.0\lib\net472\Antlr4.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.DHIfl, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.DHIfl.18.0.0\lib\net472\DHI.DHIfl.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Generic, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Generic.18.0.0\lib\net472\DHI.Generic.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Generic.MikeZero.DFS, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.DFS.18.0.0\lib\netstandard2.0\DHI.Generic.MikeZero.DFS.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Generic.MikeZero.EUM, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.EUM.18.0.0\lib\netstandard2.0\DHI.Generic.MikeZero.EUM.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Math.Expression, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Math.Expression.18.0.0\lib\net472\DHI.Math.Expression.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.BoundaryModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.BoundaryModule.18.0.0\lib\net472\DHI.Mike1D.BoundaryModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.ControlModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.ControlModule.18.0.0\lib\net472\DHI.Mike1D.ControlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.CrossSectionModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.CrossSectionModule.18.0.0\lib\net472\DHI.Mike1D.CrossSectionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.DataAssimilationModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.DataAssimilationModule.18.0.0\lib\net472\DHI.Mike1D.DataAssimilationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Engine, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.Engine.18.0.0\lib\net472\DHI.Mike1D.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.FloodMap, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.FloodMap.18.0.0\lib\net472\DHI.Mike1D.FloodMap.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Generic, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.Generic.18.0.0\lib\net472\DHI.Mike1D.Generic.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.HDParameterDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.HDParameterDataAccess.18.0.0\lib\net472\DHI.Mike1D.HDParameterDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Mike1DDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.Mike1DDataAccess.18.0.0\lib\net472\DHI.Mike1D.Mike1DDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.MzCouplings, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.Engine.18.0.0\lib\net472\DHI.Mike1D.MzCouplings.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.NetworkDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.NetworkDataAccess.18.0.0\lib\net472\DHI.Mike1D.NetworkDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Optimization, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.Engine.18.0.0\lib\net472\DHI.Mike1D.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.RainfallRunoffModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.RainfallRunoffModule.18.0.0\lib\net472\DHI.Mike1D.RainfallRunoffModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.ResultDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.ResultDataAccess.18.0.0\lib\net472\DHI.Mike1D.ResultDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.SimLauncher, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.SimLauncher.18.0.0\lib\net472\DHI.Mike1D.SimLauncher.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.StructureModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.StructureModule.18.0.0\lib\net472\DHI.Mike1D.StructureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.PFS, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.PFS.18.0.0\lib\netstandard2.0\DHI.PFS.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Projections, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Projections.18.0.0\lib\netstandard2.0\DHI.Projections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InputManipulator.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="ParseModifiers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunInfo.cs" />
+    <Compile Include="Threshold.cs" />
+    <Compile Include="Thresholds.cs" />
+    <Compile Include="TimeSeries\GeneralReader.cs" />
+    <Compile Include="TimeSeries\PI.cs" />
+    <Compile Include="TimeSeries\PIReader.cs" />
+    <Compile Include="TimeSeries\PIWriter.cs" />
+    <Compile Include="TimeSeries\TimeSeries.cs" />
+    <Compile Include="TimeSeries\TsIdentification.cs" />
+    <Compile Include="TimeSeries\TSValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

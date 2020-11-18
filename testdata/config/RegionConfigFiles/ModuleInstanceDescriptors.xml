@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleInstanceDescriptors xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/moduleInstanceDescriptors.xsd" version="1.0">
+	 <moduleInstanceDescriptor id="PI2DFS0">
+	<description>Export DFS0 files</description>
+	</moduleInstanceDescriptor>	
+	<moduleInstanceDescriptor id="Res1D2PI">
+	<description>Res1D time series to PI</description>
+	</moduleInstanceDescriptor>	
+	<moduleInstanceDescriptor id="importDFS0">
+	<description>Import DFS0 file</description>
+	</moduleInstanceDescriptor>	
+	<moduleInstanceDescriptor id="modify_and_run">
+	<description>Modify setup and run</description>
+	</moduleInstanceDescriptor>		
+    <moduleInstanceDescriptor id="modify_py">
+	<description>Modify setup using python</description>
+	</moduleInstanceDescriptor>			
+</moduleInstanceDescriptors>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 (x64) (http://www.altova.com) by Pavel Tachecí (DHI a.s.) -->
+<locationSets version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/locationSets.xsd">
+
+<locationSet id="all_stations">
+		<csvFile>
+			<file>resultsCSV.csv</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<charset>UTF-8</charset>
+			<id>%modelobjec%</id>
+			<name>%modelobjec%</name>
+			<x>%x_coord%</x>
+			<y>%y_coord%</y>
+			<attribute id="modelobjec" name="modelobjec">
+				<text>%modelobjec%</text>
+			</attribute>
+			</csvFile>
+	</locationSet>
+	<locationSet id="result_q">
+		<locationSetId>all_stations</locationSetId>
+		<constraints>
+			<attributeTextContains contains="QPoint" id="modelobjec"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="result_h">
+		<locationSetId>all_stations</locationSetId>
+		<constraints>
+			<attributeTextContains contains="HPoint" id="modelobjec"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="forecastedYR">
+		<esriShapeFile>
+			<file>forecastedYR.shp</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<charset>UTF-8</charset>
+			<id>YR_%name%</id>
+			<name>%name%</name>
+		</esriShapeFile>
+	</locationSet>
+	
+        <locationSet id="usgs_gates">
+		<esriShapeFile>
+			<file>USGS_84.shp</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<charset>UTF-8</charset>
+			<id>%sitecode%</id>
+			<name>%name%</name>
+			<attribute id="flow_spa1" name="flow spa1">
+				<number>%sp1%</number>
+			</attribute>
+			<attribute id="flow_spa2" name="flow spa2">
+				<number>%sp2%</number>
+			</attribute>
+			<attribute id="flow_spa3" name="flow spa3">
+				<number>%sp3%</number>
+			</attribute>
+
+		</esriShapeFile>
+		</locationSet>
+		
+		<!--locationSet id="catchments">
+		<esriShapeFile>
+			<file>Catchments.shp</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<charset>UTF-8</charset>
+			<id>catchment_%name%</id>
+			<name>%modelobjec%</name>
+		</esriShapeFile>
+		</locationSet-->
+
+    <locationSet id="catchment">
+		<esriShapeFile>
+			<file>Catchment.shp</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<charset>UTF-8</charset>
+			<id>%name%</id>
+			<name>%modelobjec%</name>
+		</esriShapeFile>
+		</locationSet>
+		
+		<locationSet id="tide">
+		<esriShapeFile>
+			<file>tide.shp</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<charset>UTF-8</charset>
+			<id>%name%</id>
+			<name>%name%</name>
+		</esriShapeFile>
+		</locationSet>	
+		
+		<!--locationSet id="usgs">
+		<esriShapeFile>
+			<file>usgs.shp</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<charset>UTF-8</charset>
+			<id>%name%</id>
+			<name>%name%</name>
+		</esriShapeFile>
+	</locationSet-->	
+</locationSets>

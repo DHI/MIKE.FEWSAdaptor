@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<!-- General -->
+			<string key="mike_exe" value="c:\Program Files (x86)\DHI\MIKE Zero\2021\bin\x64\DHI.Mike1D.Application.exe"/>
+			<!--string key="mike_exe" value="c:\fews\fewsMIKEHydro\test\run.bat"/-->
+			<string key="model_root_dir" value="c:\fews\fewsMIKEHydro\setup"/>
+			<string key="relative_setup_path" value="NAPA RIVER Simple training.mhydro"/>
+		</properties>
+		<moduleInstanceId>modify_and_run</moduleInstanceId>
+	</activity>
+</workflow>

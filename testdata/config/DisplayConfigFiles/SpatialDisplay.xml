@@ -1,0 +1,3580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2020 rel. 2 sp1 (x64) (http://www.altova.com) by Jakub Krejci (Český hydrometeorologický ústav) -->
+<gridDisplay xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews
+http://fews.wldelft.nl/schemas/version1.0/gridDisplay.xsd">
+	<title>Spatial Data Display</title>
+	<defaults>
+		<parameterGroupId>Precipitation</parameterGroupId>
+		<classBreaks>
+			<unitVisible>true</unitVisible>
+			<break color="FFFFFF" lowerValue="0" opaquenessPercentage="20"/>
+			<break color="FFFFFF" lowerValue="0.001" opaquenessPercentage="50"/>
+			<break color="380071" lowerValue="0.1" opaquenessPercentage="50"/>
+			<break color="3000AA" lowerValue="0.3" opaquenessPercentage="50"/>
+			<break color="0000FF" lowerValue="0.6" opaquenessPercentage="50"/>
+			<break color="006DC3" lowerValue="1" opaquenessPercentage="50"/>
+			<break color="00A200" lowerValue="2" opaquenessPercentage="50"/>
+			<break color="00BE00" lowerValue="4" opaquenessPercentage="50"/>
+			<break color="34DB00" lowerValue="6" opaquenessPercentage="50"/>
+			<break color="9EDF00" lowerValue="10" opaquenessPercentage="50"/>
+			<break color="E3DF00" lowerValue="15" opaquenessPercentage="50"/>
+			<break color="FFB200" lowerValue="20" opaquenessPercentage="50"/>
+			<break color="FF8600" lowerValue="30" opaquenessPercentage="50"/>
+			<break color="FF5900" lowerValue="40" opaquenessPercentage="50"/>
+			<break color="FF0000" lowerValue="60" opaquenessPercentage="50"/>
+			<break color="A20000" lowerValue="80" opaquenessPercentage="50"/>
+			<break color="740404" lowerValue="100" opaquenessPercentage="50"/>
+			<break color="FF00CC" lowerValue="150" opaquenessPercentage="50"/>
+		</classBreaks>
+	</defaults>
+	<defaults>
+		<parameterGroupId>Temperature</parameterGroupId>
+		<classBreaks>
+			<break color="6700FD" lowerValue="-20" opaquenessPercentage="50"/>
+			<break color="0065FF" lowerValue="-15" opaquenessPercentage="50"/>
+			<break color="07C8FF" lowerValue="-10" opaquenessPercentage="50"/>
+			<break color="09FAFF" lowerValue="-6" opaquenessPercentage="50"/>
+			<break color="00FFC9" lowerValue="-4" opaquenessPercentage="50"/>
+			<break color="00FF68" lowerValue="-2" opaquenessPercentage="50"/>
+			<break color="B6FE70" lowerValue="-1" opaquenessPercentage="50"/>
+			<break color="FEFEC8" lowerValue="0" opaquenessPercentage="50"/>
+			<break color="F8FF0A" lowerValue="1" opaquenessPercentage="50"/>
+			<break color="E3DF00" lowerValue="2" opaquenessPercentage="50"/>
+			<break color="FFB200" lowerValue="4" opaquenessPercentage="50"/>
+			<break color="FF8600" lowerValue="6" opaquenessPercentage="50"/>
+			<break color="FF5900" lowerValue="10" opaquenessPercentage="50"/>
+			<break color="FF0000" lowerValue="15" opaquenessPercentage="50"/>
+			<break color="A20000" lowerValue="20" opaquenessPercentage="50"/>
+			<break color="740404" lowerValue="25" opaquenessPercentage="50"/>
+			<break color="FF00CC" lowerValue="30" opaquenessPercentage="50"/>
+		</classBreaks>
+	</defaults>
+	<defaults>
+		<parameterGroupId>Evaporation</parameterGroupId>
+		<classBreaks>
+			<color opaquenessPercentage="50" color="white" lowerValue="0"/>
+			<lowerColor>lavender blush2</lowerColor>
+			<upperColor>royal blue4</upperColor>
+			<lowerValue>0.5</lowerValue>
+			<lowerValue>1.0</lowerValue>
+			<lowerValue>8</lowerValue>
+			<lowerValue>9</lowerValue>
+			<lowerValue>10</lowerValue>
+			<lowerValue>11</lowerValue>
+			<lowerValue>12</lowerValue>
+			<lowerValue>13</lowerValue>
+			<lowerValue>14</lowerValue>
+			<lowerColor>royal blue4</lowerColor>
+			<upperColor>yellow</upperColor>
+			<lowerValue>15</lowerValue>
+			<lowerValue>16</lowerValue>
+			<lowerValue>17</lowerValue>
+			<lowerValue>18</lowerValue>
+			<lowerValue>19</lowerValue>
+			<lowerValue>20</lowerValue>
+			<lowerValue>21</lowerValue>
+			<lowerValue>22</lowerValue>
+			<lowerValue>23</lowerValue>
+			<lowerColor>orange</lowerColor>
+			<upperColor>purple</upperColor>
+			<lowerValue>24</lowerValue>
+			<lowerValue>25</lowerValue>
+			<lowerValue>26</lowerValue>
+			<lowerValue>27</lowerValue>
+			<lowerValue>28</lowerValue>
+			<lowerValue>31</lowerValue>
+		</classBreaks>
+	</defaults>
+	<defaults>
+		<parameterGroupId>Waterlevel</parameterGroupId>
+		<parameterGroupId>Waterdepth</parameterGroupId>
+		<classBreaks>
+			<color opaquenessPercentage="50" color="white" lowerValue="0.001"/>
+			<lowerColor>light blue</lowerColor>
+			<upperColor>blue</upperColor>
+			<lowerOpaquenessPercentage>50</lowerOpaquenessPercentage>
+			<upperOpaquenessPercentage>50</upperOpaquenessPercentage>
+			<lowerValue>0.002</lowerValue>
+			<lowerValue>0.1</lowerValue>
+			<lowerValue>0.2</lowerValue>
+			<lowerValue>0.3</lowerValue>
+			<lowerValue>0.5</lowerValue>
+			<lowerValue>1</lowerValue>
+			<lowerValue>1.5</lowerValue>
+			<lowerColor>blue</lowerColor>
+			<upperColor>yellow</upperColor>
+			<lowerOpaquenessPercentage>50</lowerOpaquenessPercentage>
+			<upperOpaquenessPercentage>50</upperOpaquenessPercentage>
+			<lowerValue>2</lowerValue>
+			<lowerValue>2.5</lowerValue>
+			<lowerValue>3</lowerValue>
+			<lowerColor>yellow</lowerColor>
+			<upperColor>red</upperColor>
+			<lowerOpaquenessPercentage>50</lowerOpaquenessPercentage>
+			<upperOpaquenessPercentage>50</upperOpaquenessPercentage>
+			<lowerValue>3.5</lowerValue>
+			<lowerValue>4</lowerValue>
+			<lowerValue>4.5</lowerValue>
+			<lowerValue>5</lowerValue>
+		</classBreaks>
+	</defaults>
+	<defaults>
+		<parameterGroupId>Discharge</parameterGroupId>
+		<classBreaks>
+			<lowerColor>lavender blush2</lowerColor>
+			<upperColor>royal blue4</upperColor>
+			<lowerValue>0</lowerValue>
+			<lowerValue>1</lowerValue>
+			<lowerValue>2</lowerValue>
+			<lowerValue>3</lowerValue>
+			<lowerValue>4</lowerValue>
+			<lowerValue>10</lowerValue>
+			<lowerValue>15</lowerValue>
+			<lowerValue>20</lowerValue>
+			<lowerValue>25</lowerValue>
+			<lowerValue>30</lowerValue>
+			<lowerColor>royal blue4</lowerColor>
+			<upperColor>yellow</upperColor>
+			<lowerValue>35</lowerValue>
+			<lowerValue>40</lowerValue>
+			<lowerValue>45</lowerValue>
+			<lowerValue>50</lowerValue>
+			<lowerValue>75</lowerValue>
+			<lowerValue>100</lowerValue>
+			<lowerValue>200</lowerValue>
+			<lowerValue>300</lowerValue>
+			<lowerValue>400</lowerValue>
+			<lowerColor>orange</lowerColor>
+			<upperColor>red</upperColor>
+			<lowerValue>500</lowerValue>
+			<lowerValue>750</lowerValue>
+			<lowerValue>1000</lowerValue>
+			<lowerValue>1250</lowerValue>
+			<lowerValue>1500</lowerValue>
+			<lowerValue>2000</lowerValue>
+		</classBreaks>
+	</defaults>
+	<defaults>
+		<parameterGroupId>Impacts</parameterGroupId>
+		<classBreaks>
+			<lowerColor>yellow1</lowerColor>
+			<upperColor>red</upperColor>
+			<lowerOpaquenessPercentage>70</lowerOpaquenessPercentage>
+			<upperOpaquenessPercentage>70</upperOpaquenessPercentage>
+			<lowerValue>1</lowerValue>
+			<lowerValue>50</lowerValue>
+			<lowerValue>100</lowerValue>
+			<lowerValue>200</lowerValue>
+			<lowerValue>300</lowerValue>
+			<lowerValue>400</lowerValue>
+			<lowerValue>500</lowerValue>
+			<lowerValue>600</lowerValue>
+			<lowerValue>700</lowerValue>
+			<lowerValue>800</lowerValue>
+			<lowerValue>900</lowerValue>
+			<lowerValue>1000</lowerValue>
+		</classBreaks>
+	</defaults>
+	<defaults>
+		<geoMap>
+			<geoDatum>WGS 1984</geoDatum>
+			<projection>web_mercator</projection>
+			<defaultExtent id="CZ" name="Česká republika">
+				<left>10.021972656250043</left>
+				<right>22.689208984375043</right>
+				<top>51.25320775855257</top>
+				<bottom>48.325093157342685</bottom>
+			</defaultExtent>
+			<extraExtent id="BR">
+				<left>14.8</left>
+				<right>18.3</right>
+				<top>49.9</top>
+				<bottom>48.45</bottom>
+			</extraExtent>
+			<extraExtent id="CB">
+				<left>13</left>
+				<right>15.5</right>
+				<top>49.9</top>
+				<bottom>48.35</bottom>
+			</extraExtent>
+			<extraExtent id="HK">
+				<left>15</left>
+				<right>17</right>
+				<top>50.9</top>
+				<bottom>49.5</bottom>
+			</extraExtent>
+			<extraExtent id="PL">
+				<left>12.25</left>
+				<right>14.2</right>
+				<top>50.36</top>
+				<bottom>49</bottom>
+			</extraExtent>
+			<extraExtent id="PR">
+				<left>13.5</left>
+				<right>16.2</right>
+				<top>51.2</top>
+				<bottom>49.1</bottom>
+			</extraExtent>
+			<extraExtent id="UL">
+				<left>11.74</left>
+				<right>15.38</right>
+				<top>51.1</top>
+				<bottom>49.73</bottom>
+			</extraExtent>
+			<extraExtent id="OS">
+				<left>16.35</left>
+				<right>19.2</right>
+				<top>50.8</top>
+				<bottom>49.2</bottom>
+			</extraExtent>
+			<scaleBarVisible>true</scaleBarVisible>
+			<northArrowVisible>true</northArrowVisible>
+			<labelsVisible>true</labelsVisible>
+			<backgroundColor>white</backgroundColor>
+			<openStreetMapLayer id="Open Street Map">
+				<url>http://tile.openstreetmap.org</url>
+				<visible>true</visible>
+				<cacheDir>$CACHE_FOLDER$/OSM</cacheDir>
+			</openStreetMapLayer>
+			<openStreetMapLayer id="Landscape">
+				<url>http://tile.thunderforest.com/landscape</url>
+				<visible>false</visible>
+				<cacheDir>$CACHE_FOLDER$/LandscapeTiles</cacheDir>
+			</openStreetMapLayer>
+			<layer id="Satellite">
+				<className>nl.wldelft.libx.openmap.GenericTileServerLayer</className>
+				<visible>false</visible>
+				<properties>
+					<string key="tileUrlPattern" value="http://h%RIGHT(QUAD_KEY,1)%.ortho.tiles.virtualearth.net/tiles/h%QUAD_KEY%.jpeg?g=1"/>
+					<string key="cacheDir" value="$CACHE_FOLDER$/Satellite_Cache"/>
+					<int key="minZoomLevel" value="2"/>
+					<int key="maxZoomLevel" value="17"/>
+					<int key="topZoomLevel" value="19"/>
+					<int key="tileSize" value="256"/>
+				</properties>
+			</layer>
+			<wmsLayer id="srtmv4.1_s0_pyramidal_color">
+				<url>http://www.webservice-energy.org/mapserv/srtm?</url>
+				<wmsLayerName>srtmv4.1_s0_pyramidal_color</wmsLayerName>
+				<visible>false</visible>
+				<cacheDir>$CACHE_FOLDER$/WMSLayers/srtmv4.1_s0_pyramidal_color</cacheDir>
+			</wmsLayer>
+			<esriShapeLayer id="Vodní toky">
+				<description>Vodní toky</description>
+				<file>vodni_toky.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%NAZEV%</toolTip>
+				<lineColor>7CE5FC</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>10</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="7 poboček">
+				<description>7_pobocek</description>
+				<file>7_pobocek.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<lineColor>E8E6E6</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="povodi_CB">
+				<description>povodi_CB</description>
+				<file>povodi_CB.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%ID_AL_subp%</toolTip>
+				<lineColor>FEEBB8</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_CB_P">
+				<description>srážkoměrné stanice ČB</description>
+				<file>stanice_CB_P_WGS.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>FA00EB</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_CB_Q">
+				<description>průtokoměrné stanice ČB</description>
+				<file>stanice_CB_Q_WGS.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>00A5FA</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="povodi_PL">
+				<description>povodi_PL</description>
+				<file>povodi_PL.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%ID_AL_subp%</toolTip>
+				<lineColor>FEEBB8</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_PL_P">
+				<description>srážkoměrné stanice PL</description>
+				<file>stanice_PL_P.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>FA00EB</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_PL_Q">
+				<description>průtokoměrné stanice PL</description>
+				<file>stanice_PL_Q.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>00A5FA</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="povodi_HK">
+				<description>povodi_HK</description>
+				<file>povodi_HK.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%ID_AL_subp%</toolTip>
+				<lineColor>FEEBB8</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_HK_P">
+				<description>srážkoměrné stanice HK</description>
+				<file>stanice_HK_P.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>FA00EB</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_HK_Q">
+				<description>průtokoměrné stanice HK</description>
+				<file>stanice_HK_Q.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>00A5FA</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="povodi_UL">
+				<description>povodi_UL</description>
+				<file>povodi_UL.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%ID_AL_subp%</toolTip>
+				<lineColor>FEEBB8</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_UL_P">
+				<description>srážkoměrné stanice UL</description>
+				<file>stanice_UL_P.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>FA00EB</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_UL_Q">
+				<description>průtokoměrné stanice UL</description>
+				<file>stanice_UL_Q.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>00A5FA</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="povodi_PR">
+				<description>povodi_PR</description>
+				<file>povodi_PR.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%ID_AL_subp%</toolTip>
+				<lineColor>FEEBB8</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_PR_P">
+				<description>srážkoměrné stanice PR</description>
+				<file>stanice_PR_P.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>FA00EB</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_PR_Q">
+				<description>průtokoměrné stanice PR</description>
+				<file>stanice_PR_Q.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>00A5FA</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_BR_P">
+				<description>srážkoměrné stanice BR</description>
+				<file>stanice_BR_P.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>FA00EB</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_BR_Q">
+				<description>průtokoměrné stanice BR</description>
+				<file>stanice_BR_Q.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>00A5FA</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="povodi_BR">
+				<description>povodi_BR</description>
+				<file>povodi_BR.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%NAME%</toolTip>
+				<lineColor>FFBF11</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1.5"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="polygony_BR">
+				<description>polygony_stanic_BR</description>
+				<file>polygony_stanic_BR.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%NAME%</toolTip>
+				<lineColor>FEEBB8</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_OS_P">
+				<description>srážkoměrné stanice OS</description>
+				<file>stanice_OS_P.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>FA00EB</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="stanice_OS_Q">
+				<description>průtokoměrné stanice OS</description>
+				<file>stanice_OS_Q.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<charset>UTF-8</charset>
+				<visible>true</visible>
+				<toolTip>%FEWS_Nazev%</toolTip>
+				<fillRgbColor>00A5FA</fillRgbColor>
+				<pointSize>6</pointSize>
+			</esriShapeLayer>
+			<esriShapeLayer id="povodi_OS">
+				<description>povodi_OS</description>
+				<file>povodi_OS.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%NAME%</toolTip>
+				<lineColor>FFBF11</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1.5"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="polygony_OS">
+				<description>polygony_stanic_OS</description>
+				<file>polygony_stanic_OS.shp</file>
+				<geoDatum>WGS 1984</geoDatum>
+				<visible>true</visible>
+				<toolTip>%NAME%</toolTip>
+				<lineColor>FEEBB8</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+		</geoMap>
+		<timeDisplayLabels>bottomRight</timeDisplayLabels>
+	</defaults>
+	<!-- all branches -->
+	<gridPlotGroup id="all_prec" name="Precipitation (all)">
+		<gridPlotGroup id="all_prec_grid" name="Deterministic">
+			<gridPlot id="all_prec_grid_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>import_merge</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.obs</parameterId>
+					<locationId>cr_radar</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="all_prec_grid_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_aladin</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationId>cr_aladin</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="all_prec_grid_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_ecmwf</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationId>cr_ecmwf</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="264"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="all_prec_grid_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_gfs</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationId>cr_gfs</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="192"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<!--<gridPlot id="all_prec_grid_icon" name="ICON forecast test">
+				<timeSeriesSet>
+					<moduleInstanceId>import_icon</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast.icon</parameterId>
+					<locationId>cr_icon</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour"/>
+					<relativeViewPeriod unit="day" start="-2" end="7" startOverrulable="true"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="2"/>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+                <movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>-->
+			<!--<gridPlot id="all_prec_grid_icon_int" name="ICON forecast interpolated">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_icon</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast.icon</parameterId>
+					<locationId>cr_icon</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour"/>
+					<relativeViewPeriod unit="hour" start="-48" end="122"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="2"/>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+                <movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="all_prec_grid_icon_shift" name="ICON forecast shift">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_icon</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationId>cr_icon</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour"/>
+					<relativeViewPeriod unit="hour" start="-48" end="122"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="2"/>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+                <movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="all_prec_grid_icon_deacc" name="ICON forecast deacc">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_icon</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast.icon.deacc</parameterId>
+					<locationId>cr_icon</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour"/>
+					<relativeViewPeriod unit="hour" start="-48" end="122"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="2"/>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+                <movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>-->
+			<gridPlot id="all_prec_grid_icon" name="ICON forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_icon</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast.icon</parameterId>
+					<locationId>cr_icon</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour"/>
+					<relativeViewPeriod unit="hour" start="-48" end="122"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="2"/>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="all_prec_grid_cotrec" name="Cotrec forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>merge_cotrec</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationId>cr_radar</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-4" end="4"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="all_prec_ensemble" name="Ensemble">
+			<gridPlot id="cb_prec_ensemble_aladin" name="Aladin ensemble forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_aladin_laef_prec</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationId>cr_aladin_laef_grib</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read complete forecast</readWriteMode>
+					<ensembleId>LAEF</ensembleId>
+					<ensembleMemberId>00</ensembleMemberId>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="cb_prec_ensemble_ecmwf" name="ECMWF ensemble forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_ecmwf_ensemble</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationId>cr_ecmwf_ensemble</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="264"/>
+					<readWriteMode>read complete forecast</readWriteMode>
+					<ensembleId>ecmwf_ensemble</ensembleId>
+					<ensembleMemberId>0</ensembleMemberId>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="all_temp" name="Temperature (all)">
+		<gridPlotGroup id="all_temp_grid" name="Deterministic">
+			<gridPlot id="all_temp_grid_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_aladin</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationId>cr_aladin</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="all_temp_grid_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_ecmwf</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationId>cr_ecmwf</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="264"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="all_temp_grid_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_gfs</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationId>cr_gfs</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="3"/>
+					<relativeViewPeriod unit="hour" start="-72" end="192"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>
+			<gridPlot id="all_temp_grid_icon" name="ICON forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_icon</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.forecast.icon</parameterId>
+					<locationId>cr_icon</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour"/>
+					<relativeViewPeriod unit="day" start="-2" end="10" startOverrulable="true" endOverrulable="true"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>
+			<!--			<gridPlot id="all_temp_grid_icon" name="ICON forecast test">
+				<timeSeriesSet>
+					<moduleInstanceId>import_icon</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.forecast.icon</parameterId>
+					<locationId>cr_icon</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour"/>
+					<relativeViewPeriod unit="day" start="-2" end="7" startOverrulable="true"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>-->
+		</gridPlotGroup>
+		<gridPlotGroup id="cb_temp_ensemble" name="Ensemble">
+			<gridPlot id="cb_temp_aladin_ensamble" name="Aladin ensemble forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_aladin_laef_temp</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationId>cr_aladin_laef_grib</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read complete forecast</readWriteMode>
+					<ensembleId>LAEF</ensembleId>
+					<ensembleMemberId>00</ensembleMemberId>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="cb_temp_ecmwf_ensamble" name="ECMWF ensemble forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_ecmwf_ensemble</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationId>cr_ecmwf_ensemble</locationId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="264"/>
+					<readWriteMode>read complete forecast</readWriteMode>
+					<ensembleId>ecmwf_ensemble</ensembleId>
+					<ensembleMemberId>0</ensembleMemberId>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<!-- CB -->
+	<gridPlotGroup id="cb_discharge" name="Discharge (CB)">
+		<viewPermission>permission_cb</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed Discharge">
+			<timeSeriesSet>
+				<moduleInstanceId>import_estanice</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>Q.obs</parameterId>
+				<locationSetId>cb_flow</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+	</gridPlotGroup>
+	<gridPlotGroup id="cb_prec" name="Precipitation (CB)">
+		<viewPermission>permission_cb</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed precipitaion">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>P.obs</parameterId>
+				<locationSetId>cb_prec</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+		<gridPlotGroup id="cb_prec_catch" name="Catchments">
+			<gridPlot id="cb_prec_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.idw</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="cb_prec_catch_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_merge_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.merge</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="cb_prec_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.aladin</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="cb_prec_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="cb_prec_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.gfs</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="cb_prec_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.thiessen</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="cb_prec_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.bulletin</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="cb_prec_grid" name="Grid">
+			<gridPlot id="cb_prec_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.obs</parameterId>
+					<locationId>cr_idw_cb</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="cb_prec_zones" name="Zones">
+			<gridPlot id="cb_prec_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationSetId>cb_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="cb_temp" name="Temperature (CB)">
+		<viewPermission>permission_cb</viewPermission>
+		<gridPlotGroup id="cb_temp_catch" name="Catchments">
+			<gridPlot id="cb_temp_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.idw</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="cb_temp_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.aladin</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="cb_temp_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.ecmwf</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="cb_temp_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.gfs</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="cb_temp_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.thiessen</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="cb_temp_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.bulletin</parameterId>
+					<locationSetId>cb_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="cb_temp_grid" name="Grid">
+			<gridPlot id="cb_temp_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.obs</parameterId>
+					<locationId>cr_idw_cb</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="cb_temp_zones" name="Zones">
+			<gridPlot id="cb_temp_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationSetId>cb_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<!-- HK -->
+	<gridPlotGroup id="hk_discharge" name="Discharge (HK)">
+		<viewPermission>permission_hk</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed Discharge">
+			<timeSeriesSet>
+				<moduleInstanceId>import_estanice</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>Q.obs</parameterId>
+				<locationSetId>hk_flow</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+	</gridPlotGroup>
+	<gridPlotGroup id="hk_prec" name="Precipitation (HK)">
+		<viewPermission>permission_hk</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed precipitaion">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>P.obs</parameterId>
+				<locationSetId>hk_prec</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+		<gridPlotGroup id="hk_prec_catch" name="Catchments">
+			<gridPlot id="hk_prec_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.idw</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="hk_prec_catch_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_merge_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.merge</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="hk_prec_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.aladin</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="hk_prec_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="hk_prec_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.gfs</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="hk_prec_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.thiessen</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="hk_prec_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.bulletin</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="hk_prec_grid" name="Grid">
+			<gridPlot id="hk_prec_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.obs</parameterId>
+					<locationId>cr_idw_hk</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="hk_prec_zones" name="Zones">
+			<gridPlot id="hk_prec_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationSetId>hk_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="hk_temp" name="Temperature (HK)">
+		<viewPermission>permission_hk</viewPermission>
+		<gridPlotGroup id="hk_temp_catch" name="Catchments">
+			<gridPlot id="hk_temp_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.idw</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="hk_temp_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.aladin</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="hk_temp_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.ecmwf</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="hk_temp_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.gfs</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="hk_temp_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.thiessen</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="hk_temp_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.bulletin</parameterId>
+					<locationSetId>hk_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="hk_temp_grid" name="Grid">
+			<gridPlot id="hk_temp_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.obs</parameterId>
+					<locationId>cr_idw_hk</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="hk_temp_zones" name="Zones">
+			<gridPlot id="hk_temp_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationSetId>hk_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<!-- PL -->
+	<gridPlotGroup id="pl_discharge" name="Discharge (PL)">
+		<viewPermission>permission_pl</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed Discharge">
+			<timeSeriesSet>
+				<moduleInstanceId>import_estanice</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>Q.obs</parameterId>
+				<locationSetId>pl_flow</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+	</gridPlotGroup>
+	<gridPlotGroup id="pl_prec" name="Precipitation (PL)">
+		<viewPermission>permission_pl</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed precipitaion">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>P.obs</parameterId>
+				<locationSetId>pl_prec</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+			<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+		</gridPlot>
+		<gridPlotGroup id="pl_prec_catch" name="Catchments">
+			<gridPlot id="pl_prec_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.idw</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pl_prec_catch_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_merge_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.merge</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pl_prec_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.aladin</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pl_prec_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pl_prec_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.gfs</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pl_prec_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.thiessen</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pl_prec_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.bulletin</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pl_prec_grid" name="Grid">
+			<gridPlot id="pl_prec_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.obs</parameterId>
+					<locationId>cr_idw_pl</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pl_prec_zones" name="Zones">
+			<gridPlot id="pl_prec_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationSetId>pl_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="pl_temp" name="Temperature (PL)">
+		<viewPermission>permission_pl</viewPermission>
+		<gridPlotGroup id="pl_temp_catch" name="Catchments">
+			<gridPlot id="pl_temp_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.idw</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pl_temp_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.aladin</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pl_temp_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.ecmwf</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pl_temp_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.gfs</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pl_temp_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.thiessen</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pl_temp_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.bulletin</parameterId>
+					<locationSetId>pl_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pl_temp_grid" name="Grid">
+			<gridPlot id="pl_temp_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.obs</parameterId>
+					<locationId>cr_idw_pl</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pl_temp_zones" name="Zones">
+			<gridPlot id="pl_temp_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationSetId>pl_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<!-- UL -->
+	<gridPlotGroup id="ul_discharge" name="Discharge (UL)">
+		<viewPermission>permission_ul</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed Discharge">
+			<timeSeriesSet>
+				<moduleInstanceId>import_estanice</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>Q.obs</parameterId>
+				<locationSetId>ul_flow</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+	</gridPlotGroup>
+	<gridPlotGroup id="ul_prec" name="Precipitation (UL)">
+		<viewPermission>permission_ul</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed precipitaion">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>P.obs</parameterId>
+				<locationSetId>ul_prec</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+			<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+		</gridPlot>
+		<gridPlotGroup id="ul_prec_catch" name="Catchments">
+			<gridPlot id="ul_prec_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.idw</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="ul_prec_catch_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_merge_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.merge</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="ul_prec_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.aladin</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="ul_prec_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="ul_prec_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.gfs</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="ul_prec_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.thiessen</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="ul_prec_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.bulletin</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="ul_prec_grid" name="Grid">
+			<gridPlot id="ul_prec_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.obs</parameterId>
+					<locationId>cr_idw_ul</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="ul_prec_zones" name="Zones">
+			<gridPlot id="ul_prec_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationSetId>ul_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="ul_temp" name="Temperature (UL)">
+		<viewPermission>permission_ul</viewPermission>
+		<gridPlotGroup id="ul_temp_catch" name="Catchments">
+			<gridPlot id="ul_temp_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.idw</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="ul_temp_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.aladin</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="ul_temp_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.ecmwf</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="ul_temp_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.gfs</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="ul_temp_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.thiessen</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>
+			<gridPlot id="ul_temp_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.bulletin</parameterId>
+					<locationSetId>ul_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="ul_temp_grid" name="Grid">
+			<gridPlot id="ul_temp_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.obs</parameterId>
+					<locationId>cr_idw_ul</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="ul_temp_zones" name="Zones">
+			<gridPlot id="ul_temp_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationSetId>ul_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<!-- PR -->
+	<gridPlotGroup id="pr_discharge" name="Discharge (PR)">
+		<viewPermission>permission_pr</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed Discharge">
+			<timeSeriesSet>
+				<moduleInstanceId>import_estanice</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>Q.obs</parameterId>
+				<locationSetId>pr_flow</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+	</gridPlotGroup>
+	<gridPlotGroup id="pr_prec" name="Precipitation (PR)">
+		<viewPermission>permission_pr</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed precipitaion">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>P.obs</parameterId>
+				<locationSetId>pr_prec</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+			<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+		</gridPlot>
+		<gridPlotGroup id="pr_prec_catch" name="Catchments">
+			<gridPlot id="pr_prec_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.idw</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pr_prec_catch_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_merge_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.merge</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pr_prec_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.aladin</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pr_prec_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pr_prec_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.gfs</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pr_prec_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.thiessen</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="pr_prec_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.bulletin</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pr_prec_grid" name="Grid">
+			<gridPlot id="pr_prec_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.obs</parameterId>
+					<locationId>cr_idw_pr</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pr_prec_zones" name="Zones">
+			<gridPlot id="pr_prec_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationSetId>pr_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="pr_temp" name="Temperature (PR)">
+		<viewPermission>permission_pr</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed temperature">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>T.obs</parameterId>
+				<locationSetId>pr_temp</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+		<gridPlotGroup id="pr_temp_catch" name="Catchments">
+			<gridPlot id="pr_temp_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.idw</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pr_temp_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.aladin</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pr_temp_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.ecmwf</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pr_temp_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.gfs</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pr_temp_catch_thiessen" name="Thiessen from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_thiessen_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.thiessen</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="pr_temp_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.bulletin</parameterId>
+					<locationSetId>pr_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pr_temp_grid" name="Grid">
+			<gridPlot id="pr_temp_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.obs</parameterId>
+					<locationId>cr_idw_pr</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="pr_temp_zones" name="Zones">
+			<gridPlot id="pr_temp_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationSetId>pr_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<!-- BR -->
+	<gridPlotGroup id="br_discharge" name="Discharge (BR)">
+		<viewPermission>permission_br</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed Discharge">
+			<timeSeriesSet>
+				<moduleInstanceId>import_estanice</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>Q.obs</parameterId>
+				<locationSetId>br_flow</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+	</gridPlotGroup>
+	<gridPlotGroup id="br_prec" name="Precipitation (BR)">
+		<viewPermission>permission_br</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed precipitaion">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>P.obs</parameterId>
+				<locationSetId>br_prec</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-528" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+			<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+		</gridPlot>
+		<gridPlotGroup id="br_prec_catch" name="Catchments">
+			<gridPlot id="br_prec_catch_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_merge_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.merge</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="br_prec_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.aladin</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="br_prec_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="br_prec_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.gfs</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="br_prec_catch_icon" name="ICON forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_icon_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.icon</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="br_prec_catch_cotrec" name="COTREC forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_cotrec_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.cotrec</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="3"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="br_prec_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.bulletin</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="br_prec_zones" name="Zones">
+			<gridPlot id="br_prec_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationSetId>br_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="br_temp" name="Temperature (BR)">
+		<viewPermission>permission_br</viewPermission>
+		<gridPlotGroup id="br_temp_catch" name="Catchments">
+			<gridPlot id="br_temp_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.idw</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="br_temp_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.aladin</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="br_temp_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.ecmwf</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="br_temp_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.gfs</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="br_temp_catch_ICON" name="ICON forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_icon_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.icon</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="br_temp_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.bulletin</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="br_temp_grid" name="Grid">
+			<gridPlot id="br_temp_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.obs</parameterId>
+					<locationId>cr_idw_br</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-528" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="br_temp_zones" name="Zones">
+			<gridPlot id="br_temp_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationSetId>br_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-48" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAverageTimeSpan unit="hour" multiplier="3"/>
+				<movingAverageTimeSpan unit="hour" multiplier="6"/>
+				<movingAverageTimeSpan unit="hour" multiplier="12"/>
+				<movingAverageTimeSpan unit="day" multiplier="1"/>
+				<movingAverageTimeSpan unit="day" multiplier="2"/>
+				<movingAverageTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<!-- OS -->
+	<gridPlotGroup id="os_discharge" name="Discharge (OS)">
+		<viewPermission>permission_os</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed Discharge">
+			<timeSeriesSet>
+				<moduleInstanceId>import_estanice</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>Q.obs</parameterId>
+				<locationSetId>os_flow</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-500" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+	</gridPlotGroup>
+	<gridPlotGroup id="os_prec" name="Precipitation (OS)">
+		<viewPermission>permission_os</viewPermission>
+		<gridPlot id=" discharge_plot" name="Observed precipitaion">
+			<timeSeriesSet>
+				<moduleInstanceId>import_clidata</moduleInstanceId>
+				<valueType>scalar</valueType>
+				<parameterId>P.obs</parameterId>
+				<locationSetId>os_prec</locationSetId>
+				<timeSeriesType>external historical</timeSeriesType>
+				<timeStep unit="hour"/>
+				<relativeViewPeriod unit="hour" start="-500" end="0"/>
+				<readWriteMode>read only</readWriteMode>
+			</timeSeriesSet>
+		</gridPlot>
+		<gridPlotGroup id="os_prec_catch" name="Catchments">
+			<gridPlot id="os_prec_catch_merge" name="Merge">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_merge_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.obs.merge</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-500" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_prec_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.aladin</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_prec_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.ecmwf</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_prec_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.gfs</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_prec_catch_icon" name="ICON forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_icon_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.icon</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="os_prec_catch_cotrec" name="COTREC forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_cotrec_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.cotrec</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="3"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="7"/>
+			</gridPlot>
+			<gridPlot id="os_prec_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast.bulletin</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-72" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="os_prec_grid" name="Grid">
+			<gridPlot id="os_prec_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_prec_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>P.obs</parameterId>
+					<locationId>cr_idw_os</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-265" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="os_prec_zones" name="Zones">
+			<gridPlot id="os_prec_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>P.forecast</parameterId>
+					<locationSetId>os_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-72" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="os_temp" name="Temperature (OS)">
+		<viewPermission>permission_os</viewPermission>
+		<gridPlotGroup id="os_temp_catch" name="Catchments">
+			<gridPlot id="os_temp_catch_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.obs.idw</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-500" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_temp_catch_aladin" name="Aladin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_aladin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.aladin</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_temp_catch_ecmwf" name="ECMWF forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_ecmwf_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.ecmwf</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="264"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_temp_catch_gfs" name="GFS forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_gfs_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.gfs</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_temp_catch_icon" name="ICON forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_icon_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.icon</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="0" end="78"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+				<movingAccumulationTimeSpan unit="hour" multiplier="6"/>
+				<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+				<movingAccumulationTimeSpan unit="day" multiplier="3"/>
+			</gridPlot>
+			<gridPlot id="os_temp_catch_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_bulletin_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast.bulletin</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-72" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="os_temp_grid" name="Grid">
+			<gridPlot id="os_temp_grid_idw" name="IDW from stations">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_temp_idw</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>T.obs</parameterId>
+					<locationId>cr_idw_os</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="hour" start="-240" end="0"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="os_temp_zones" name="Zones">
+			<gridPlot id="os_temp_zones_bulletin" name="Bulletin forecast">
+				<timeSeriesSet>
+					<moduleInstanceId>import_bulletin</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>T.forecast</parameterId>
+					<locationSetId>os_zones</locationSetId>
+					<timeSeriesType>external forecasting</timeSeriesType>
+					<timeStep unit="hour" multiplier="6"/>
+					<relativeViewPeriod unit="hour" start="-72" end="72"/>
+					<readWriteMode>read only</readWriteMode>
+				</timeSeriesSet>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="br_snow" name="Snow (BR)">
+		<viewPermission>permission_br</viewPermission>
+		<gridPlotGroup id="br_snow_grid" name="Grid">
+			<gridPlot id="br_sce_grid" name="Snow Cover">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_sce</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>SCE.obs</parameterId>
+					<locationId>cr_snow</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="br_svh_grid" name="Snow Water Equivalent transform">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_svh</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>SWE.obs</parameterId>
+					<locationId>cr_snow</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="br_snow_grid" name="Catchments">
+			<gridPlot id="br_sce_catch" name="Snow Cover">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_sce_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>SCE.obs</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="br_svh_catch" name="Water Snow Equivalent">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_svh_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>SWE.obs</parameterId>
+					<locationSetId>br_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+	<gridPlotGroup id="os_snow" name="Snow (OS)">
+		<viewPermission>permission_os</viewPermission>
+		<gridPlotGroup id="os_snow_grid" name="Grid">
+			<gridPlot id="os_sce_grid" name="Snow Cover">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_sce</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>SCE.obs</parameterId>
+					<locationId>cr_snow</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="all_svh_grid" name="Snow Water Equivalent">
+				<timeSeriesSet>
+					<moduleInstanceId>transform_svh</moduleInstanceId>
+					<valueType>grid</valueType>
+					<parameterId>SWE.obs</parameterId>
+					<locationId>cr_snow</locationId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+		<gridPlotGroup id="os_snow_grid" name="Catchments">
+			<gridPlot id="os_sce_catch" name="Snow Cover">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_sce_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>SCE.obs</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+			<gridPlot id="os_svh_catch" name="Water Snow Equivalent">
+				<timeSeriesSet>
+					<moduleInstanceId>interpolate_svh_catch</moduleInstanceId>
+					<valueType>scalar</valueType>
+					<parameterId>SWE.obs</parameterId>
+					<locationSetId>os_polygon_catchments</locationSetId>
+					<timeSeriesType>external historical</timeSeriesType>
+					<timeStep unit="hour" multiplier="1"/>
+					<relativeViewPeriod unit="day" start="-10" end="2"/>
+					<readWriteMode>add originals</readWriteMode>
+				</timeSeriesSet>
+				<contourLinesColor>black</contourLinesColor>
+			</gridPlot>
+		</gridPlotGroup>
+	</gridPlotGroup>
+</gridDisplay>

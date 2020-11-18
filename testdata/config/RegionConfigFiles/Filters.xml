@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 (x64) (http://www.altova.com) by Pavel Tachecí (DHI a.s.) -->
+<filters version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/filters.xsd">
+	
+	<filter id="observation_P" name="Observed + forecasted P">
+		<validationIconsVisible>false</validationIconsVisible>
+		<timeSeriesSet>
+			<moduleInstanceId>importDFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>P.obs</parameterId>
+			<locationSetId>forecastedYR</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>		
+	</filter>	
+	<filter id="observation_tide" name="Tide">
+		<validationIconsVisible>false</validationIconsVisible>
+		<timeSeriesSet>
+			<moduleInstanceId>importDFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>tide</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="hour" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>		
+	</filter>	
+
+   <filter id="catchment" name="Catchment Data">
+		<validationIconsVisible>false</validationIconsVisible>
+		<timeSeriesSet>
+			<moduleInstanceId>importDFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>ETref.obs</parameterId>
+			<locationSetId>catchment</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>	
+		<!--timeSeriesSet>
+			<moduleInstanceId>importDFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>P.obs</parameterId>
+			<locationSetId>catchment</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet-->		
+	</filter>	
+	<filter id="usgs_gates" name="USGS - gates">
+		<validationIconsVisible>false</validationIconsVisible>
+		<timeSeriesSet>
+			<moduleInstanceId>importDFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>Q.obs</parameterId>
+			<locationSetId>usgs_gates</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="24"/>
+			<relativeViewPeriod unit="hour" start="-10" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>		
+	</filter>		
+	
+	<!--filter id="tide" name="Tide">
+		<validationIconsVisible>false</validationIconsVisible>		
+		<timeSeriesSet>
+			<moduleInstanceId>PI2DFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>tide</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>		
+	</filter-->
+	<!--filter id="cb_zones" name="Zones">
+		<validationIconsVisible>false</validationIconsVisible>
+		<timeSeriesSet>
+			<moduleInstanceId>PI2DFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>P.forecast</parameterId>
+			<locationSetId>cb_zones</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="6"/>
+			<relativeViewPeriod unit="day" start="0" end="6"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>
+</filter-->		
+		<!--filter id="forecasted" name="Forecasted P">
+		<validationIconsVisible>false</validationIconsVisible>		
+		<timeSeriesSet>
+			<moduleInstanceId>PI2DFS0</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>P.forecast</parameterId>
+			<locationSetId>forecastedYR</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>		
+	</filter-->	
+	
+	<filter id="result_q" name="Results">
+		<validationIconsVisible>false</validationIconsVisible>				
+		<timeSeriesSet>
+			<moduleInstanceId>Res1D2PI</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>Q.forecast</parameterId>
+			<locationSetId>result_q</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>		
+		<timeSeriesSet>
+			<moduleInstanceId>Res1D2PI</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.forecast</parameterId>
+			<locationSetId>result_h</locationSetId>
+			<timeSeriesType>external forecasting</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-65" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+			<synchLevel>5</synchLevel>
+		</timeSeriesSet>	
+	</filter>		
+	
+</filters>

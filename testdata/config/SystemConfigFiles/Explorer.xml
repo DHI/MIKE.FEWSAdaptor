@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 sp1 (http://www.altova.com) by Stanislav Horáček (DHI) -->
+<explorer version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/explorer.xsd">
+	<systemInformation>
+		<description>FEWS Demo</description>
+		<systemCaption>$EXPLORER_SYSTEMCAPTION$	</systemCaption>
+	</systemInformation>
+	<map>
+		<geoDatum>WGS 1984</geoDatum>
+		<projection>web_mercator</projection>
+		<defaultExtent id="Napa" name="Napa">
+			<left>-122.7</left>
+			<right>-122.16</right>
+			<top>38.67</top>
+			<bottom>38</bottom>
+		</defaultExtent>
+                           
+		<scaleBarVisible>true</scaleBarVisible>
+		<northArrowVisible>true</northArrowVisible>
+		<labelsVisible>true</labelsVisible>
+		<backgroundColor>white</backgroundColor>
+		<layer id="arcgis_topo" name="ArcGIS World Topo Map">
+			<className>nl.wldelft.libx.openmap.GenericTileServerLayer</className>
+			<visible>false</visible>
+			<properties>
+				<string key="tileUrlPattern" value="http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/%ZOOM%/%ROW%/%COLUMN%"/>
+				<string key="cacheDir" value="$CACHE_FOLDER$/Esri_topo"/>
+				<int key="minZoomLevel" value="1"/>
+				<int key="maxZoomLevel" value="19"/>
+				<int key="topZoomLevel" value="21"/>
+				<int key="tileSize" value="256"/>
+			</properties>
+		</layer>
+		<layer id="arcgis_canvas" name="ArcGIS Canvas World LightGray Base">
+			<className>nl.wldelft.libx.openmap.GenericTileServerLayer</className>
+			<visible>true</visible>
+			<properties>
+				<string key="tileUrlPattern" value="http://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/%ZOOM%/%ROW%/%COLUMN%"/>
+				<string key="cacheDir" value="$CACHE_FOLDER$/Esri_Canvas_World_Light_Gray_Base"/>
+				<int key="minZoomLevel" value="1"/>
+				<int key="maxZoomLevel" value="19"/>
+				<int key="topZoomLevel" value="21"/>
+				<int key="tileSize" value="256"/>
+			</properties>
+		</layer>
+		<openStreetMapLayer id="Open Street Map">
+			<url>http://tile.openstreetmap.org</url>
+			<visible>false</visible>
+			<cacheDir>$CACHE_FOLDER$/OSM</cacheDir>
+		</openStreetMapLayer>
+		<openStreetMapLayer id="Landscape">
+			<url>http://tile.thunderforest.com/landscape</url>
+			<visible>false</visible>
+			<cacheDir>$CACHE_FOLDER$/LandscapeTiles</cacheDir>
+		</openStreetMapLayer>
+		<layer id="Satellite">
+			<className>nl.wldelft.libx.openmap.GenericTileServerLayer</className>
+			<visible>false</visible>
+			<properties>
+				<string key="tileUrlPattern" value="http://h%RIGHT(QUAD_KEY,1)%.ortho.tiles.virtualearth.net/tiles/h%QUAD_KEY%.jpeg?g=1"/>
+				<string key="cacheDir" value="$CACHE_FOLDER$/Satellite_Cache"/>
+				<int key="minZoomLevel" value="2"/>
+				<int key="maxZoomLevel" value="17"/>
+				<int key="topZoomLevel" value="19"/>
+				<int key="tileSize" value="256"/>
+			</properties>
+		</layer>
+		<wmsLayer id="srtmv4.1_s0_pyramidal_color">
+			<url>http://www.webservice-energy.org/mapserv/srtm?</url>
+			<wmsLayerName>srtmv4.1_s0_pyramidal_color</wmsLayerName>
+			<visible>false</visible>
+			<cacheDir>$CACHE_FOLDER$/WMSLayers/srtmv4.1_s0_pyramidal_color</cacheDir>
+		</wmsLayer>
+			<esriShapeLayer id="Catchments">
+				<description>Napa Catchment</description>
+				<file>Napa_Catchments.shp</file>
+				<geoDatum>WGS 1984</geoDatum>				
+				<visible>true</visible>
+				<toolTip>%modelobjec%</toolTip>
+				<lineColor>red</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>50</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="Branches">
+				<description>Napa Branches</description>
+				<file>Branches.shp</file>
+				<geoDatum>WGS 1984</geoDatum>				
+				<visible>true</visible>
+				<toolTip>%modelobjec%</toolTip>
+				<lineColor>blue</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>0</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			<esriShapeLayer id="Branches">
+				<description>All Catchments</description>
+				<file>Catchment_all.shp</file>
+				<geoDatum>WGS 1984</geoDatum>				
+				<visible>true</visible>
+				<toolTip>%modelobjec%</toolTip>
+				<lineColor>green</lineColor>
+				<fillRgbColor>FFFFFF</fillRgbColor>
+				<opaquenessPercentage>0</opaquenessPercentage>
+				<lineWidth value="1"/>
+			</esriShapeLayer>
+			
+	</map>
+	<explorerTasks>
+		<explorerTask name="Map Display">
+			<iconFile>splitmap.gif</iconFile>
+			<mnemonic>A</mnemonic>
+			<arguments>MapDisplay</arguments>
+			<taskClass>nl.wldelft.fews.gui.plugin.map.MapDisplay</taskClass>
+			<toolbarTask>false</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl A</accelerator>
+		</explorerTask>
+		<explorerTask name="Data Display">
+			<iconFile>timeseries.png</iconFile>
+			<mnemonic>D</mnemonic>
+			<taskClass>nl.wldelft.fews.gui.plugin.timeseries.EditorTimeSeriesDialog</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<allowMultipleInstances>true</allowMultipleInstances>
+			<accelerator>ctrl D</accelerator>
+			<doubleClickLocationEnabled>false</doubleClickLocationEnabled>
+			<loadAtStartup>true</loadAtStartup>
+		</explorerTask>
+		<!--explorerTask name="Spatial Data">
+			<iconFile>map_grid.png</iconFile>
+			<mnemonic>G</mnemonic>
+			<arguments>GridDisplay</arguments>
+			<taskClass>nl.wldelft.fews.gui.plugin.grid.GridDisplay</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl G</accelerator>
+			<loadAtStartup>true</loadAtStartup>
+		</explorerTask-->
+		<explorerTask name="Manual Forecast">
+			<iconFile>manforc.png</iconFile>
+			<mnemonic>M</mnemonic>
+			<taskClass>nl.wldelft.fews.gui.plugin.manualforecast.ManualForecastDialog</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl M</accelerator>
+		</explorerTask>
+		<explorerTask name="Forecast Management">
+			<iconFile>forcman.png</iconFile>
+			<mnemonic>F</mnemonic>
+			<taskClass>nl.wldelft.fews.gui.plugin.forecast.ForecastDialog</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl F</accelerator>
+		</explorerTask>
+		<explorerTask name="System Monitor">
+			<iconFile>system_monitor.png</iconFile>
+			<mnemonic>S</mnemonic>
+			<taskClass>nl.wldelft.fews.gui.plugin.systemmonitor.SystemMonitorDialog</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl S</accelerator>
+		</explorerTask>
+		<explorerTask name="Forecast Tree">
+			<iconFile>compass.png</iconFile>
+			<taskClass>nl.wldelft.fews.gui.plugin.selection.SegmentSelectionDialog</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<toolWindow>true</toolWindow>
+			<loadAtStartup>true</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="Modifier Display">
+			<iconFile>wrench.png</iconFile>
+			<displayConfigFileName>ModifierDisplay</displayConfigFileName>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<loadAtStartup>false</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="Forecaster Notes">
+			<displayConfigFileName>ForecasterNotesDisplay</displayConfigFileName>
+			<toolbarTask>false</toolbarTask>
+			<menubarTask>false</menubarTask>
+			<toolWindow>true</toolWindow>
+			<loadAtStartup>true</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="Workflow Navigator">
+			<iconFile>tree.png</iconFile>
+			<mnemonic>W</mnemonic>
+			<arguments>WorkflowNavigator</arguments>
+			<taskClass>nl.wldelft.fews.gui.plugin.workflownavigator.WorkflowNavigator</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl W</accelerator>
+			<toolWindow>false</toolWindow>
+			<loadAtStartup>false</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="Database Lister">
+			<iconFile>database.png</iconFile>
+			<mnemonic>L</mnemonic>
+			<predefinedDisplay>time series lister</predefinedDisplay>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl L</accelerator>
+			<toolWindow>false</toolWindow>
+			<loadAtStartup>false</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="Config Metadata">
+			<iconFile>configFileDisplay.png</iconFile>
+			<mnemonic>T</mnemonic>
+			<predefinedDisplay>tabular config files display</predefinedDisplay>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl T</accelerator>
+			<loadAtStartup>false</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="Plot Overview">
+			<taskClass>nl.wldelft.fews.gui.plugin.displaythumbnails.ShortcutsThumbnailsDialog</taskClass>
+			<toolbarTask>false</toolbarTask>
+			<menubarTask>false</menubarTask>
+			<toolWindow>false</toolWindow>
+			<loadAtStartup>false</loadAtStartup>
+		</explorerTask>
+		<explorerTask name="Web Browser">
+			<iconFile>document.png</iconFile>
+			<mnemonic>h</mnemonic>
+			<taskClass>nl.wldelft.fews.gui.plugin.webbrowser.WebBrowserDisplay</taskClass>
+			<toolbarTask>true</toolbarTask>
+			<menubarTask>true</menubarTask>
+			<accelerator>ctrl R</accelerator>
+			<loadAtStartup>false</loadAtStartup>
+		</explorerTask>
+	</explorerTasks>
+	<statusBarConfig>
+		<description>Standard date-time format</description>
+		<dateTimeFormat>HH:mm:ss</dateTimeFormat>
+		<timeGMT>true</timeGMT>
+		<timeCurrent>true</timeCurrent>
+		<timeLastRefresh>true</timeLastRefresh>
+		<statusOfSystem>true</statusOfSystem>
+		<mouseCoordinates>true</mouseCoordinates>
+		<userName>true</userName>
+	</statusBarConfig>
+	<globalDatum>MSL</globalDatum>
+	<dateTime>
+		<timeZoneName>CET</timeZoneName>
+		<timeZoneName>GMT</timeZoneName>
+		<dateTimeFormat>dd-MM-yyyy HH:mm:ss</dateTimeFormat>
+		<cardinalTimeStep unit="hour" multiplier="1"/>
+	</dateTime>
+	<logPanelConfig>
+		<clientFilter>
+			<clientId>Stand alone</clientId>
+			<logFilter>
+				<level>DEBUG</level>
+				<eventType>system</eventType>
+			</logFilter>
+			<logFilter>
+				<level>DEBUG</level>
+				<eventType>debug</eventType>
+			</logFilter>
+		</clientFilter>
+		<clientFilter>
+			<clientId>Operator Client</clientId>
+			<logFilter>
+				<level>DEBUG</level>
+				<eventType>system</eventType>
+			</logFilter>
+			<logFilter>
+				<level>DEBUG</level>
+				<eventType>debug</eventType>
+			</logFilter>
+		</clientFilter>
+	</logPanelConfig>
+	<panelSizes>
+		<loggingPanelSize>5</loggingPanelSize>
+		<listsPanelSize>22</listsPanelSize>
+		<filterListSize>29</filterListSize>
+		<locationListSize>45</locationListSize>
+		<parameterListSize>25</parameterListSize>
+		<forecastListSize>5</forecastListSize>
+	</panelSizes>
+	<panelHeaderLabels>
+		<filterPanelHeader>Data sources</filterPanelHeader>
+		<locationPanelHeader>Locations</locationPanelHeader>
+		<parameterPanelHeader>Parameters</parameterPanelHeader>
+		<forecastPanelHeader>Simulations</forecastPanelHeader>
+	</panelHeaderLabels>
+	<notification enabled="true"/>
+	<fileMenu>
+		<exportTimeSeries visible="true"/>
+	</fileMenu>
+</explorer>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Run xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.8">
+    <logLevel>info</logLevel>
+    <timeZone>0.0</timeZone>
+    <startDateTime date="2020-07-15" time="07:00:00"/>
+    <endDateTime date="2020-08-17" time="01:00:00"/>
+    <time0 date="2020-08-14" time="07:00:00"/>
+    <lastObservationDateTime date="2020-08-17" time="01:00:00"/>
+    <workDir>C:\fews\CHMI-FFS\modules\hydrog_opava_merge_aladin\run\work</workDir>
+    <inputTimeSeriesFile>C:\fews\CHMI-FFS\modules\hydrog_opava_merge_aladin\run\pi-input\pi-input.xml</inputTimeSeriesFile>
+    <outputDiagnosticFile>C:\fews\CHMI-FFS\modules\hydrog_opava_merge_aladin\run\pi-output\pi-diagnostics.xml</outputDiagnosticFile>
+    <outputTimeSeriesFile>C:\fews\CHMI-FFS\modules\hydrog_opava_merge_aladin\run\pi-output\pi-output.xml</outputTimeSeriesFile>
+    <properties>
+        <string key="parameterDischarge" value="Q"/>
+        <string key="parameterPrecipitation" value="P"/>
+        <string key="parameterTemperature" value="T"/>
+    </properties>
+</Run>

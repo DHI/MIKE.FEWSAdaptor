@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 (x64) (http://www.altova.com) by Pavel Tachecí (DHI a.s.) -->
+<parameterGroups version="1.0" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/parameters.xsd">
+	<ratingCurveStageParameterId>H.obs</ratingCurveStageParameterId>
+	<ratingCurveDischargeParameterId>Q.obs</ratingCurveDischargeParameterId>
+	<parameterGroup id="Discharge">
+		<parameterType>instantaneous</parameterType>
+		<unit>m3/s</unit>
+
+		<valueResolution>0.001</valueResolution>
+		<parameter id="empty.param" name="Empty param">
+			<shortName>empty.param</shortName>
+		</parameter>
+		<parameter id="Q.forecast" name="Forecasted Q">
+			<shortName>Q.forecast</shortName>
+		</parameter>
+		<parameter id="Q.boundary.ecmwf" name="Boundary condition Q - ECWMF">
+			<shortName>Q.boundary.ecmwf</shortName>
+		</parameter>
+				<parameter id="Q.boundary.aladin" name="Boundary condition Q - Aladin">
+			<shortName>Q.boundary.aladin</shortName>
+		</parameter>
+		<parameter id="Q.obs" name="Q Obs.">
+			<shortName>Q.obs</shortName>
+		</parameter>
+		<parameter id="Q.sim" name="Q Simulated ">
+			<shortName>Q.sim</shortName>
+		</parameter>
+		<parameter id="Q.forecast.merge_aladin_calibration" name="QForec. merge + Aladin Calibration">
+			<shortName>Q.forecast.merge_aladin_calibration</shortName>
+		</parameter>
+
+        <parameter id="Q.forecast.merge_bulletin_calibration" name="QForec. merge + Bulletin Calibration">
+			<shortName>Q.forecast.merge_bulletin_calibration</shortName>
+		</parameter>
+		<parameter id="Q.forecast.idw_aladin" name="QForec. idw + Aladin">
+			<shortName>Q.forecast.idw_aladin</shortName>
+		</parameter>
+		<parameter id="Q.forecast.merge_aladin" name="QForec. merge + Aladin">
+			<shortName>Q.forecast.merge_aladin</shortName>
+		</parameter>
+		<parameter id="Q.forecast.cotrec_merge_aladin" name="QForec. cotrec + merge + Aladin">
+			<shortName>Q.forecast.cotrec_merge_aladin</shortName>
+		</parameter>
+		<parameter id="Q.forecast.merge_icon" name="QForec. merge + ICON">
+			<shortName>Q.forecast.merge_icon</shortName>
+		</parameter>
+		<parameter id="Q.forecast.merge_ecmwf" name="QForec. merge + ECMWF">
+			<shortName>Q.forecast.merge_ecmwf</shortName>
+		</parameter>
+		<parameter id="Q.forecast.idw_ecmwf" name="QForec. idw + ECMWF">
+			<shortName>Q.forecast.idw_ecmwf</shortName>
+		</parameter>
+		<parameter id="Q.forecast.idw_gfs" name="QForec. idw + GFS">
+			<shortName>Q.forecast.idw_gfs</shortName>
+		</parameter>
+		<parameter id="Q.forecast.merge_gfs" name="QForec.- merge + GFS">
+			<shortName>Q.forecast.merge_gfs</shortName>
+		</parameter>
+ 		<parameter id="Q.forecast.idw_bulletin" name="QForec. idw + bulletin">
+			<shortName>Q.forecast.idw_bulletin</shortName>
+		</parameter>
+		<parameter id="Q.forecast.merge_bulletin" name="QForec. merge + bulletin">
+			<shortName>Q.forecast.merge_bulletin</shortName>
+		</parameter>
+
+
+		<parameter id="Q.outflow.sim" name="Simulated reservoir outflow">
+			<shortName>Q.outflow.sim</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin" name="QForec. ensem. idw +LAEF">
+			<shortName>Q.forecast.ensemble.idw_aladin</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin" name="QForec. ensem. merge+LAEF">
+			<shortName>Q.forecast.ensemble.merge_aladin</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin" name="QForec. ensem. cotrec+merge+LAEF">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf" name="QForec. ensem. merge +ECMWF EPS">
+			<shortName>Q.forecast.ensemble.merge_ecmwf</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf" name="QForec. COTREC+merge+ECMWF EPS">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin.max" name="QForec. idw + LAEF max">
+			<shortName>Q.forecast.ensemble.idw_aladin.max</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin.min" name="QForec. idw + LAEF min">
+			<shortName>Q.forecast.ensemble.idw_aladin.min</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin.10" name="QForec. idw + LAEF 10%">
+			<shortName>Q.forecast.ensemble.idw_aladin.10</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin.25" name="QForec. idw + LAEF 25%">
+			<shortName>Q.forecast.ensemble.idw_aladin.25</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin.50" name="QForec. idw + LAEF 50%">
+			<shortName>Q.forecast.ensemble.idw_aladin.50</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin.75" name="QForec. idw + LAEF 75%">
+			<shortName>Q.forecast.ensemble.idw_aladin.75</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_aladin.90" name="QForec. idw + LAEF 90%">
+			<shortName>Q.forecast.ensemble.idw_aladin.90</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin.max" name="QForec. merge + LAEF max">
+			<shortName>Q.forecast.ensemble.merge_aladin.max</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin.min" name="QForec. merge + LAEF min">
+			<shortName>Q.forecast.ensemble.merge_aladin.min</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin.10" name="QForec. merge + LAEF 10%">
+			<shortName>Q.forecast.ensemble.merge_aladin.10</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin.25" name="QForec. merge + LAEF 25%">
+			<shortName>Q.forecast.ensemble.merge_aladin.25</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin.50" name="QForec. merge + LAEF 50%">
+			<shortName>Q.forecast.ensemble.merge_aladin.50</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin.75" name="QForec. merge + LAEF 75%">
+			<shortName>Q.forecast.ensemble.merge_aladin.75</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_aladin.90" name="QForec. merge + LAEF 90%">
+			<shortName>Q.forecast.ensemble.merge_aladin.90</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf" name="QForec. idw + ECMWF EPS">
+			<shortName>Q.forecast.ensemble.idw_ecmwf</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf.max" name="QForec. idw + ECMWF EPS max">
+			<shortName>Q.forecast.ensemble.idw_ecmwf.max</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf.min" name="QForec. idw + ECMWF EPS min">
+			<shortName>Q.forecast.ensemble.idw_ecmwf.min</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf.10" name="QForec. idw + ECMWF EPS 10%">
+			<shortName>Q.forecast.ensemble.idw_ecmwf.10</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf.25" name="QForec. idw + ECMWF EPS 25%">
+			<shortName>Q.forecast.ensemble.idw_ecmwf.25</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf.50" name="QForec. idw + ECMWF EPS 50%">
+			<shortName>Q.forecast.ensemble.idw_ecmwf.50</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf.75" name="QForec. idw + ECMWF EPS 75%">
+			<shortName>Q.forecast.ensemble.idw_ecmwf.75</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.idw_ecmwf.90" name="QForec. idw + ECMWF EPS 90%">
+			<shortName>Q.forecast.ensemble.idw_ecmwf.90</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf.max" name="QForec. merge + ECMWF EPS max">
+			<shortName>Q.forecast.ensemble.merge_ecmwf.max</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf.min" name="QForec. merge + ECMWF EPS min">
+			<shortName>Q.forecast.ensemble.merge_ecmwf.min</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf.10" name="QForec. merge + ECMWF EPS 10%">
+			<shortName>Q.forecast.ensemble.merge_ecmwf.10</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf.25" name="QForec. merge + ECMWF EPS 25%">
+			<shortName>Q.forecast.ensemble.merge_ecmwf.25</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf.50" name="QForec. merge + ECMWF EPS 50%">
+			<shortName>Q.forecast.ensemble.merge_ecmwf.50</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf.75" name="QForec. merge + ECMWF EPS 75%">
+			<shortName>Q.forecast.ensemble.merge_ecmwf.75</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.merge_ecmwf.90" name="QForec. merge + ECMWF EPS 90%">
+			<shortName>Q.forecast.ensemble.merge_ecmwf.90</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin.max" name="QForec. COTREC+merge+LAEF max">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin.max</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin.min" name="QForec. COTREC+merge+LAEF min">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin.min</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin.10" name="QForec. COTREC+merge+LAEF 10%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin.10</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin.25" name="QForec. COTREC+merge+LAEF 25%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin.25</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin.50" name="QForec. COTREC+merge+LAEF 50%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin.50</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin.75" name="QForec. COTREC+merge+LAEF 75%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin.75</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_aladin.90" name="QForec. COTREC+merge+LAEF 90%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_aladin.90</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf.max" name="QForec. COTREC+merge+ECMWF EPS max">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf.max</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf.min" name="QForec. COTREC+merge+ECMWF EPS min">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf.min</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf.10" name="QForec. COTREC+merge+ECMWF EPS 10%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf.10</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf.25" name="QForec. COTREC+merge+ECMWF EPS 25%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf.25</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf.50" name="QForec. COTREC+merge+ECMWF EPS 50%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf.50</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf.75" name="QForec. COTREC+merge+ECMWF EPS 75%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf.75</shortName>
+		</parameter>
+		<parameter id="Q.forecast.ensemble.cotrec_merge_ecmwf.90" name="QForec. COTREC+merge+ECMWF EPS 90%">
+			<shortName>Q.forecast.ensemble.cotrec_merge_ecmwf.90</shortName>
+		</parameter>
+		<!--parameter id="Q.forecast.merge_gfc" name="Forecasted discharge - merge + GFC">
+			<shortName>Q.forecast.merge_gfc</shortName>
+			</parameter-->
+	</parameterGroup>
+	<parameterGroup id="Runoff_mm">
+		<parameterType>accumulative</parameterType>
+		<unit>mm</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="Q.specific" name="Specific runoff">
+			<shortName>Q.specific</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Precipitation">
+		<parameterType>accumulative</parameterType>
+		<unit>mm</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="P.obs" name="Precip. observed">
+			<shortName>P.obs</shortName>
+		</parameter>
+		<parameter id="P.obs.idw" name="Precip. interpol. IDW">
+			<shortName>P.obs.idw</shortName>
+		</parameter>
+		<parameter id="P.obs.thiessen" name="Precip. interpol. Thiessen">
+			<shortName>P.obs.thiessen</shortName>
+		</parameter>
+		<parameter id="P.obs.merge" name="Precip. Merge">
+			<shortName>P.obs.merge</shortName>
+		</parameter>
+		<parameter id="P.forecast" name="Precip. forecast">
+			<shortName>P.forecast</shortName>
+		</parameter>
+		<parameter id="P.forecast.aladin" name="Precip. Aladin forecast">
+			<shortName>P.forecast.aladin</shortName>
+		</parameter>
+		<parameter id="P.forecast.ecmwf" name="Precip. ECMWF forecast">
+			<shortName>P.forecast.ecmwf</shortName>
+		</parameter>
+		<parameter id="P.forecast.ensemble.ecmwf" name="Precip. forecast ECMWF EPS ensemble">
+			<shortName>P.forecast.ensemble.ecmwf</shortName>
+		</parameter>
+		<parameter id="P.forecast_ecmwf_imp" name="Forecasted precipitation import - ecmwf">
+			<shortName>P.forecast.ecmwf</shortName>
+		</parameter>
+		<parameter id="P.forecast.ensemble.laef" name="Precip. forecast LAEF ensemble">
+			<shortName>P.forecast.ensemble.laef</shortName>
+		</parameter>
+		<parameter id="P.forecast.gfs" name="Precip. forecast GFS">
+			<shortName>P.forecast.gfs</shortName>
+		</parameter>
+		<parameter id="P.forecast.icon" name="Precip. forecast ICON">
+			<shortName>P.forecast.icon</shortName>
+		</parameter>
+		<parameter id="P.forecast.icon.deacc" name="Forecasted precipitation - icon">
+			<shortName>P.forecast.icon.deacc</shortName>
+		</parameter>
+		<parameter id="P.forecast.icon.nonequidistant" name="Forecasted precipitation - icon nonequidistant">
+			<shortName>P.forecast.icon.nonequidistant</shortName>
+		</parameter>
+		<parameter id="P.forecast.bulletin" name="Precip. forecast bulletin">
+			<shortName>P.forecast.bulletin</shortName>
+		</parameter>
+        <parameter id="P.forecast.bulletin.6h" name="Precip. forecast bulletin 6h">
+			<shortName>P.forecast.bulletin.6h</shortName>
+		</parameter>
+		<parameter id="P.forecast.cotrec" name="Precip. forecast COTREC">
+			<shortName>P.forecast.cotrec</shortName>
+		</parameter>
+		<parameter id="P.forecast_3h" name="Forecasted precipitation 3h">
+			<shortName>P.forecast_3h</shortName>
+		</parameter>
+		<parameter id="P.forecast_6h" name="Forecasted precipitation 6h">
+			<shortName>P.forecast_6h</shortName>
+		</parameter>
+		<parameter id="P.forecast_disagg" name="Forecasted precipitation 6h disagregated">
+			<shortName>P.forecast_disagg</shortName>
+		</parameter>
+		<parameter id="P.forecast_diff" name="Forecasted precipitation TS difference">
+			<shortName>P.forecast_diff</shortName>
+		</parameter>
+		<parameter id="P.forecast_shift" name="Forecasted precipitation difference shifted">
+			<shortName>P.forecast_shift</shortName>
+		</parameter>
+		<parameter id="P.forecast_cotrecT1" name="Cotrec forecasted precipitation in forecast time +1 hour">
+			<shortName>P.forecast_cotrecT1</shortName>
+		</parameter>
+		<parameter id="P.forecast_cotrecT2" name="Cotrec forecasted precipitation in forecast time +2 hours">
+			<shortName>P.forecast_cotrecT2</shortName>
+		</parameter>
+		<parameter id="P.forecast_cotrecT3" name="Cotrec forecasted precipitation in forecast time +3 hours">
+			<shortName>P.forecast_cotrecT3</shortName>
+		</parameter>
+		<parameter id="P.forecast.ecmwf.6h" name="Forecasted precipitation ECMWF 6h total">
+			<shortName>P.forecast.ecmwf.6h</shortName>
+		</parameter>
+	</parameterGroup>
+
+	<parameterGroup id="snow cover">
+        <parameterType>instantaneous</parameterType>
+        <unit>cm</unit>
+        <valueResolution>1</valueResolution>
+        <parameter id="SCE.obs" name="Snow Cover">
+            <shortName>SCE.obs</shortName>
+        </parameter>
+        <parameter id="SCE.obs.dummy1" name="Snow Cover">
+            <shortName>SCE.obs.dummy1</shortName>
+        </parameter>
+        <parameter id="SCE.obs.dummy2" name="Snow Cover">
+            <shortName>SCE.obs.dummy2</shortName>
+        </parameter>
+    </parameterGroup>
+    <parameterGroup id="snow water equivalent">
+        <parameterType>instantaneous</parameterType>
+        <unit>mm</unit>
+        <valueResolution>0.1</valueResolution>
+        <parameter id="SWE.obs" name="Snow Water Equivalent">
+            <shortName>SWE.obs</shortName>
+        </parameter>
+        <parameter id="SWE.obs.dummy1" name="Snow Water Equivalent dummy1">
+            <shortName>SWE.obs.dummy1</shortName>
+        </parameter>
+        <parameter id="SWE.obs.dummy2" name="Snow Water Equivalent dummy2">
+            <shortName>SWE.obs.dummy2</shortName>
+        </parameter>
+        <parameter id="SWE.forecast" name="Forcasted Snow Water Equivalent">
+            <shortName>SWE.forecast</shortName>
+        </parameter>
+    </parameterGroup>
+
+	<parameterGroup id="Evaporation">
+		<parameterType>accumulative</parameterType>
+		<unit>mm</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="ETref.obs" name="Reference evaporation">
+			<shortName>ETref.obs</shortName>
+		</parameter>
+		<parameter id="ET.obs" name="Pan evaporation">
+			<shortName>ET.obs</shortName>
+		</parameter>
+		<parameter id="PET.obs" name="Potential Evaporation">
+			<shortName>PET.obs</shortName>
+		</parameter>
+		<parameter id="Sat.def" name="Saturation Deficit">
+			<shortName>Sat.def</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Waterdepth">
+		<parameterType>instantaneous</parameterType>
+		<unit>m</unit>
+		<valueResolution>0.001</valueResolution>
+		<parameter id="D.sim" name="Water depth">
+			<shortName>D.sim</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Waterlevel">
+		<parameterType>instantaneous</parameterType>
+		<unit>m</unit>
+		<valueResolution>0.001</valueResolution>
+		<usesDatum>true</usesDatum>
+		<parameter id="H.astro" name="Generated Astro Tide">
+			<shortName>H.astro</shortName>
+		</parameter>
+		<parameter id="H.sim" name="Simulated waterlevel">
+			<shortName>H.sim</shortName>
+		</parameter>
+		<parameter id="H.forecast" name="Forec. waterlevel">
+			<shortName>H.forecast</shortName>
+		</parameter>
+		<parameter id="H.obs" name="Obs. waterlevel">
+			<shortName>H.obs</shortName>
+		</parameter>
+		<parameter id="L.forecast" name="Forec. reservoir waterlevel">
+			<shortName>L.forecast</shortName>
+		</parameter>
+		<parameter id="L.obs" name="Obs. reservoir waterlevel">
+			<shortName>L.obs</shortName>
+		</parameter>
+
+
+	</parameterGroup>
+	<parameterGroup id="percentages">
+		<parameterType>instantaneous</parameterType>
+		<unit>%</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="interpolation.coeff" name="flood depth fraction (PCRGLOB)">
+			<shortName>interpolation.coeff</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Storage">
+		<parameterType>instantaneous</parameterType>
+		<unit>m3</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="Res.vol.sim" name="Reservoir volume">
+			<shortName>Res.vol</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Solar Duration">
+		<parameterType>accumulative</parameterType>
+		<unit>hours</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="SOL.obs" name="Observed solar duration">
+			<shortName>SOL.obs</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Solar Radiation">
+		<parameterType>instantaneous</parameterType>
+		<unit>W/m2</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="Rs.obs" name="Observed solar radiation">
+			<shortName>Rs.obs</shortName>
+		</parameter>
+		<parameter id="Rso.obs" name="Clear sky solar radiation">
+			<shortName>Rso.obs</shortName>
+		</parameter>
+		<parameter id="Rnl.obs" name="Observed net long wave radiation">
+			<shortName>Rnl.obs</shortName>
+		</parameter>
+		<parameter id="Rn.obs" name="Observed net short - long wave radiation">
+			<shortName>Rn.obs</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Wind speed">
+		<parameterType>instantaneous</parameterType>
+		<unit>m/s</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="WS.obs" name="Observed wind speed">
+			<shortName>WS.obs</shortName>
+		</parameter>
+		<parameter id="WS.u.forecast" name="WS.u.forecast">
+			<shortName>WS.u.forecast</shortName>
+		</parameter>
+		<parameter id="WS.v.forecast" name="WS.v.forecast">
+			<shortName>WS.v.forecast</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Temperature">
+		<parameterType>instantaneous</parameterType>
+		<unit>oC</unit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="T.obs" name="Temperature observed">
+			<shortName>T.obs</shortName>
+		</parameter>
+		<parameter id="T.obs.idw" name="Temperature interp. IDW">
+			<shortName>T.obs.idw</shortName>
+		</parameter>
+		<parameter id="T.obs.thiessen" name="Temperature interp. Thiessen">
+			<shortName>T.obs.thiessen</shortName>
+		</parameter>
+		<parameter id="T.forecast" name="Temperature forec.">
+			<shortName>T.forecast</shortName>
+		</parameter>
+		<parameter id="T.forecast.aladin" name="Temperature forec. Aladin">
+			<shortName>T.forecast.aladin</shortName>
+		</parameter>
+		<parameter id="T.forecast.ecmwf" name="Temperature forec. ECMWF">
+			<shortName>T.forecast.ecmwf</shortName>
+		</parameter>
+		<parameter id="T.forecast.ecmwf.6h" name="Temperature forec. ECMWF 6h">
+			<shortName>T.forecast.ecmwf.6h</shortName>
+		</parameter>
+		<parameter id="T.forecast.gfs" name="Temperature forec. GFS">
+			<shortName>T.forecast.gfs</shortName>
+		</parameter>
+		<parameter id="T.forecast.icon" name="Temperature forec. ICON">
+			<shortName>T.forecast.icon</shortName>
+		</parameter>
+		<parameter id="T.forecast.bulletin" name="Temperature forec. bulletin">
+			<shortName>T.forecast.bulletin</shortName>
+		</parameter>
+        <parameter id="T.forecast.bulletin.6h" name="TEmperature forecast bulletin 6h">
+			<shortName>T.forecast.bulletin.6h</shortName>
+		</parameter>
+		<parameter id="T.forecast.ensemble.laef" name="Temperature forec. LAEF ensemble">
+			<shortName>T.forecast.ensemble.laef</shortName>
+		</parameter>
+		<parameter id="T.forecast.ensemble.ecmwf" name="Temperature forec. ECMWF EPS ensemble">
+			<shortName>T.forecast.ensemble.laef</shortName>
+		</parameter>
+		<parameter id="Tmin.obs" name="Temperature min observed">
+			<shortName>Tmin.obs</shortName>
+		</parameter>
+		<parameter id="Tmax.obs" name="Temperature max observed">
+			<shortName>Tmax.obs</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Relative humidity">
+		<parameterType>instantaneous</parameterType>
+		<unit>%</unit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="RH.obs" name="Observed relative humidity">
+			<shortName>RH.obs</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Vapour pressure">
+		<parameterType>instantaneous</parameterType>
+		<unit>kPa</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="ea.obs" name="Observed actual vapour pressure">
+			<shortName>ea.obs</shortName>
+		</parameter>
+		<parameter id="es.obs" name="Observed saturation vapour pressure">
+			<shortName>es.obs</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Pressure">
+		<parameterType>instantaneous</parameterType>
+		<unit>Pa</unit>
+		<valueResolution>0.01</valueResolution>
+		<parameter id="Pres.obs" name="Observed air pressure">
+			<shortName>Pres.obs</shortName>
+		</parameter>
+		<parameter id="AirPressure.forecast" name="AirPressure.forecast">
+			<shortName>AirPressure.forecast</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Time">
+		<parameterType>instantaneous</parameterType>
+		<unit>s</unit>
+		<valueResolution>1</valueResolution>
+		<parameter id="Time.forecast.offset" name="Time Offset (Forecast)">
+			<shortName>Time.forecast.offset</shortName>
+		</parameter>
+		<parameter id="Time.forecast.travel" name="Travel Time (Forecast)">
+			<shortName>Time.forecast.travel</shortName>
+		</parameter>
+		<parameter id="Time.peak" name="Time to Peak">
+			<shortName>Time.peak</shortName>
+		</parameter>
+		<parameter id="Time.threshold" name="Time to Threshold">
+			<shortName>Time.threshold</shortName>
+		</parameter>
+		<parameter id="Time.event" name="Event Duration">
+			<shortName>Time.event</shortName>
+		</parameter>
+		<parameter id="Time.start" name="Event Start">
+			<shortName>Time.start</shortName>
+		</parameter>
+		<parameter id="Time.end" name="Event End">
+			<shortName>Time.end</shortName>
+		</parameter>
+		<parameter id="Time.diff" name="Time Difference">
+			<shortName>Time.diff</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Impacts">
+		<parameterType>instantaneous</parameterType>
+		<unit>1000 Rs</unit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="damage_Residential_singlestorey_structure" name="Damage to Residential Singlestorey Structure">
+			<shortName>Residential_singlestorey_structure</shortName>
+		</parameter>
+		<parameter id="Total_damage" name="Total damage">
+			<shortName>Total damage</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Impact2people">
+		<parameterType>instantaneous</parameterType>
+		<unit>Person</unit>
+		<valueResolution>0.1</valueResolution>
+		<parameter id="PE_affected" name="Number of affected people">
+			<shortName>PE_affected</shortName>
+		</parameter>
+	</parameterGroup>
+</parameterGroups>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qualifiers xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/qualifiers.xsd">
+	<allowReferencingUndefinedQualifiers>false</allowReferencingUndefinedQualifiers>
+	<qualifier id="mean" name="mean"/>
+	<qualifier id="max" name="max"/>
+	<qualifier id="corr" name="corr"/>
+	<qualifier id="NoZero" name="NoZero"/>
+	<qualifier id="wet" name="wet"/>
+	<qualifier id="dry" name="dry"/>
+	<qualifier id="pan" name="pan"/>
+	<qualifier id="TRMM" name="TRMM"/>
+	<qualifier id="GPM" name="GPM"/>
+	<qualifier id="Observed" name="Observed"/>
+</qualifiers>

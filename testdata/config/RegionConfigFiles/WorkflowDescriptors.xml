@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 (x64) (http://www.altova.com) by Pavel Tachecí (DHI a.s.) -->
+
+<workflowDescriptors xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflowDescriptors.xsd" version="1.0"> 
+    <workflowDescriptor id="exportDFS0" name="Export DFS0" visible="true" forecast="false" autoApprove="false" allowApprove="false"/>
+    <workflowDescriptor id="Res1d2PI" name="Res1D to PI" visible="true" forecast="false" autoApprove="false" allowApprove="false"/>
+	<workflowDescriptor id="importDFS0" name="Read Dfs0" visible="true" forecast="false" autoApprove="false" allowApprove="false"/>
+	<workflowDescriptor id="modify_and_run" name="Modify setup and run" visible="true" forecast="false" autoApprove="false" allowApprove="false"/>	
+	<workflowDescriptor id="full_computation" name="Execute full workflow" visible="true" forecast="true" autoApprove="false" allowApprove="true"/>	
+	<workflowDescriptor id="modify_py" name="Modify setup using python script" visible="true" forecast="true" autoApprove="false" allowApprove="true"/>			
+</workflowDescriptors>

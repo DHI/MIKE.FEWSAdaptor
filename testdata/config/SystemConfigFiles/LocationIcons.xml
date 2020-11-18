@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 (x64) (http://www.altova.com) by Pavel Tachecí (DHI a.s.) -->
+<locationIcons xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/locationIcons.xsd">
+	<rootDir>icons</rootDir>
+	<locationIcon>
+		<description>Discharge forecasted</description>
+		<iconId>location-Q</iconId>
+		<locationSetId>forecastedYR</locationSetId>
+	</locationIcon>	
+</locationIcons>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 sp1 (http://www.altova.com) by Stanislav Horáček (DHI) -->
+<thresholdWarningLevels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/thresholdWarningLevels.xsd">
+	<thresholdWarningLevel id="0" name="No threshold exceeded">
+		<color>00FFFF</color>
+		<iconName>default1.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel1.gif</historicOverlayIconName>
+		<forecastOverlayIconName>historicwarninglevel1.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="1" name="SPA 1">
+		<color>40FF40</color>
+		<iconName>warninglevel1.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel1.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel1.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="2" name="SPA 2">
+		<color>FFFF40</color>
+		<iconName>warninglevel2.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel2.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel2.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+	<thresholdWarningLevel id="3" name="SPA 3">
+		<color>FF4040</color>
+		<iconName>warninglevel3.gif</iconName>
+		<historicOverlayIconName>historicwarninglevel3.gif</historicOverlayIconName>
+		<forecastOverlayIconName>forecastwarninglevel3.gif</forecastOverlayIconName>
+	</thresholdWarningLevel>
+</thresholdWarningLevels>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 sp1 (http://www.altova.com) by Stanislav Horáček (DHI) -->
+<modifierDisplay xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/modifierDisplay.xsd">
+	<showReRunButton>false</showReRunButton>
+	<createModifierButtons>
+		<modifierId>interpolation_coeff_modifier</modifierId>
+	</createModifierButtons>
+	<timeSeriesModifiersDisplayConfig>
+		<showTimeShiftModifierButtons>false</showTimeShiftModifierButtons>
+		<showTablePanel>true</showTablePanel>
+		<defaultOperationType>Timeseries</defaultOperationType>
+	</timeSeriesModifiersDisplayConfig>
+</modifierDisplay>

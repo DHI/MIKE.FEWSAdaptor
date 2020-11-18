@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<!-- General -->
+			<string key="mike_model_dir" value="c:/fews/fewsMIKEHydro/data"/>
+			<string key="dfs0_relative_path" value="tide.dfs0"/>
+			<string key= "module_instance" value="importDFS0"/>
+			<string key= "timeSeriesType" value="external historical"/>
+			<string key=  "parameterId" value="H.obs"/>
+			<string key=  "locationsetId" value="tide"/>		
+			<string key=  "parameter_type" value="instantaneous"/>
+			<string key="pi_name" value="pi-input.xml"/>
+			<string key="map_name" value="pi2dfs0"/>
+		</properties>
+		<moduleInstanceId>PI2DFS0</moduleInstanceId>	
+		</activity>				
+		<activity>
+		<properties>
+			<!-- General -->
+			<string key="mike_model_dir" value="c:/fews/fewsMIKEHydro/data"/>
+			<string key="dfs0_relative_path" value="P.dfs0"/>
+			<string key= "module_instance" value="importDFS0"/>
+			<string key= "timeSeriesType" value="external historical"/>
+			<string key=  "parameterId" value="P.obs"/>
+			<string key=  "locationsetId" value="forecastedYR"/>		
+			<string key=  "parameter_type" value="instantaneous"/>
+			<string key="pi_name" value="pi-input.xml"/>
+			<string key="map_name" value="pi2dfs0"/>
+		</properties>
+		<moduleInstanceId>PI2DFS0</moduleInstanceId>	
+		</activity>				
+</workflow>

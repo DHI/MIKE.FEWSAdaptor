@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/generalAdapterRun.xsd">
+	<general>
+		<description>Export data to DFS0</description>
+		<!--The root dir contains temporary data that created while running the my adapters and my model -->
+		<piVersion>1.8</piVersion>
+		<rootDir>%REGION_HOME%/Modules/PI2Dfs0/run</rootDir>
+		<!--The work dir contains the input and output of my model, this data is temporary. The data my model is needed
+		in the next run of my model is transferred to fews as a warm state -->
+		<workDir>%ROOT_DIR%/work</workDir>
+		<!--The pi-input dir is filled by the GA. The pre-adapter is converting the pi input to model input.
+		 The pi-input and pi-output dir are not accessed by the model directly
+		The model input and output is in the work dir.-->
+		<exportDir>%ROOT_DIR%/pi-input</exportDir>
+		<exportDataSetDir>%WORK_DIR%</exportDataSetDir>
+		<!--This id map is converts fews ids to the ids MyModel understands and visa versa-->
+		<exportIdMap>$map_name$</exportIdMap>
+		<importDir>%ROOT_DIR%/pi-output</importDir>
+		<!--importIdMap>id_aqualog_output_$branch$</importIdMap-->
+		<dumpFileDir>%ROOT_DIR%/CrashedRunsSnapshots</dumpFileDir>
+		<dumpDir>%WORK_DIR%</dumpDir>
+		<diagnosticFile>%ROOT_DIR%/pi-output/pi-diagnostics.xml</diagnosticFile>
+	</general>
+    
+	<activities>
+		<startUpActivities>
+			<purgeActivity>
+				<filter>%ROOT_DIR%/pi-input/*.*</filter>
+			</purgeActivity>
+			<purgeActivity>
+				<filter>%ROOT_DIR%/pi-output/*.*</filter>
+			</purgeActivity>
+			<purgeActivity>
+				<filter>%WORK_DIR%/*.log</filter>
+			</purgeActivity>
+			<makeDir>
+				<dir>%ROOT_DIR%/work</dir>
+			</makeDir>
+		</startUpActivities>
+		<exportActivities>
+			<exportTimeSeriesActivity>
+				<exportFile>$pi_name$</exportFile>
+				<timeSeriesSets>				
+					<timeSeriesSet>
+						<moduleInstanceId>$module_instance$</moduleInstanceId>
+						<valueType>scalar</valueType>
+						<parameterId>$parameterId$</parameterId>
+						<locationSetId>$locationsetId$</locationSetId>				
+						<timeSeriesType>$timeSeriesType$</timeSeriesType>			
+						<timeStep unit="hour" multiplier="$ts_multiplier$"/>
+						<relativeViewPeriod unit="day" start= "-10" startOverrulable="true" end="5"/>
+						<readWriteMode>add originals</readWriteMode>
+					</timeSeriesSet>                   					
+				</timeSeriesSets>
+			</exportTimeSeriesActivity>
+			<exportDataSetActivity>
+				<moduleInstanceId>PI2DFS0</moduleInstanceId>
+			</exportDataSetActivity>
+			 <exportRunFileActivity>
+				<exportFile>%ROOT_DIR%/RunInfo.xml</exportFile>
+			</exportRunFileActivity>
+		</exportActivities>
+		<executeActivities>
+			<executeActivity>
+				<command>
+					<executable>%WORK_DIR%/PiToDfs0.exe</executable>
+				</command>
+				<arguments>
+					<argument>%ROOT_DIR%/pi-input/$pi_name$</argument>
+					<argument>$mike_model_dir$</argument>							
+					<argument>$dfs0_relative_path$</argument>
+					<argument>$parameter_type$</argument>
+				</arguments>
+				<logFile>
+					<file>%WORK_DIR%/PIToDfs0.log</file>
+					<errorLinePattern>*ERROR*</errorLinePattern>
+					<warningLinePattern>*WARNING*</warningLinePattern>
+					<infoLinePattern>*INFO*</infoLinePattern>
+				</logFile>
+				<timeOut>10000000</timeOut>
+				<ignoreDiagnostics>true</ignoreDiagnostics>
+			</executeActivity>
+		</executeActivities>
+	</activities>
+</generalAdapterRun>

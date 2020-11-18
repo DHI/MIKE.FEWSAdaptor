@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 (x64) (http://www.altova.com) by Pavel Tachecí (DHI a.s.) -->
+<topology xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/topology.xsd">
+	<enableAutoRun>false</enableAutoRun>
+	<enableAutoSelectParameters>true</enableAutoSelectParameters>
+	<enableSelectNodesFromMap>false</enableSelectNodesFromMap>
+	<!-- Info sources-->
+	<nodes id="MIKE_Test" name="MikeTest - individual components">
+	<localRun>true</localRun>
+	     <node id="exportDFS0" name="Export Dfs0">
+				<workflowId>exportDFS0</workflowId>
+				<localRun>true</localRun>
+				<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+			</node>
+        <node id="modify_and_run" name="Modify and run MIKE Hydro setup">
+				<workflowId>modify_and_run</workflowId>
+				<timeZeroShift unit="hour" multiplier="0"/>				
+				<localRun>true</localRun>
+				<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+		</node>		
+		<node id="modify_py" name="Modify MIKE Hydro setup using py script">
+				<workflowId>modify_py</workflowId>
+				<timeZeroShift unit="hour" multiplier="0"/>				
+				<localRun>true</localRun>
+				<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+		</node>		
+		<node id="importDFS0" name="Import Dfs0">
+				<workflowId>importDFS0</workflowId>
+				<localRun>true</localRun>
+				<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+		</node>		
+	     <node id="Res1d2PI" name="Res1D to FEWS">
+				<workflowId>Res1d2PI</workflowId>
+				<localRun>true</localRun>
+				<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+		</node>			
+	</nodes>
+	<nodes id="full_setup" name="MIKE Hydro adaptor">
+    	<node id="computation" name="Run full workflow">
+				<workflowId>full_computation</workflowId>
+				<timeZeroShift unit="hour" multiplier="0"/>				
+				<localRun>true</localRun>
+				<showRunApprovedForecastButton>true</showRunApprovedForecastButton>
+		</node>	
+	</nodes>		
+	<nodes id="Information_Sources" name="Information Sources">
+		<localRun>true</localRun>	
+		<nodes id="Delft-FEWS">
+			<node id="Delft_FEWS" name="Delft-FEWS Software Community">
+				<url>http://oss.deltares.nl/web/delft-fews/</url>
+				<localRun>false</localRun>
+				<showRunApprovedForecastButton>false</showRunApprovedForecastButton>
+			</node>
+			<node id="Delft-FEWS_Wiki" name="DELFT-FEWS Documentation">
+				<url>https://publicwiki.deltares.nl/display/FEWSDOC/Home</url>
+				<localRun>false</localRun>
+				<showRunApprovedForecastButton>false</showRunApprovedForecastButton>
+			</node>
+			<node id="Delft-FEWS_UserGuide" name="Delft-FEWS User Guide">
+				<url>https://publicwiki.deltares.nl/display/FEWSDOC/Delft-FEWS+User+Guide</url>
+				<localRun>false</localRun>
+				<showRunApprovedForecastButton>false</showRunApprovedForecastButton>
+			</node>
+			<node id="Deltares" name="Deltares">
+				<url>https://www.deltares.nl/en/</url>
+				<localRun>false</localRun>
+				<showRunApprovedForecastButton>false</showRunApprovedForecastButton>
+			</node>
+		</nodes>
+	</nodes>
+</topology>

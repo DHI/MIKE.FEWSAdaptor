@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/idMap.xsd">
+	<parameter internal="H.obs"  external="eumIWaterLevel;eumUmeter"/>
+	<parameter internal="P.obs" external="eumIRainfallRate;eumUmmPerDay"/>
+	<parameter internal="H.obs" external="eumIWaterLevel;eumUmeter"/>
+	<parameter internal="ETref.obs" external="eumIEvaporationRate;eumUmillimeterPerDay"/>
+	<parameter internal="P.obs" external="eumIRainfallRate;eumUmmPerDay"/>
+	<parameter internal="Q.obs" external="eumIDischarge;eumUm3PerSec"/>
+	<location external="tide.dfs0" internal="Napa Tide boundary"/>
+	<location external="NapaRainfall.dfs0" internal="YR_Napa"/>
+	<location external="StHelenaRainfall.dfs0" internal="YR_Saint Helena"/>
+	<location external="Evapotranspiration.dfs0" internal="Catchment"/>	
+	<location external="Rainfall.dfs0" internal="Catchment"/>	
+	<location external="St Helena_metric.dfs0" internal="11456000"/>		
+	<location external="Napa_metric.dfs0" internal="11458000"/>		
+</idMap>

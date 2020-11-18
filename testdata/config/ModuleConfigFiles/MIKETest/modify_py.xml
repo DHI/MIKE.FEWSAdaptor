@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/generalAdapterRun.xsd">
+	<general>
+		<description>Export data to DFS0</description>
+		<!--The root dir contains temporary data that created while running the my adapters and my model -->
+		<piVersion>1.8</piVersion>
+		<rootDir>%REGION_HOME%/Modules/modify_py/run</rootDir>
+		<!--The work dir contains the input and output of my model, this data is temporary. The data my model is needed
+		in the next run of my model is transferred to fews as a warm state -->
+		<workDir>%ROOT_DIR%/work</workDir>
+		<!--The pi-input dir is filled by the GA. The pre-adapter is converting the pi input to model input.
+		 The pi-input and pi-output dir are not accessed by the model directly
+		The model input and output is in the work dir.-->
+		<exportDir>%ROOT_DIR%/pi-input</exportDir>
+		<exportDataSetDir>%WORK_DIR%</exportDataSetDir>
+		
+		<importDir>%ROOT_DIR%/pi-output</importDir>
+		<!--importIdMap>id_aqualog_output_$branch$</importIdMap-->
+		<dumpFileDir>%ROOT_DIR%/CrashedRunsSnapshots</dumpFileDir>
+		<dumpDir>%WORK_DIR%</dumpDir>
+		<diagnosticFile>%ROOT_DIR%/pi-output/pi-diagnostics.xml</diagnosticFile>
+	</general>
+    
+	<activities>
+		<startUpActivities>			
+			<purgeActivity>
+				<filter>%WORK_DIR%/*.log</filter>
+			</purgeActivity>
+			<makeDir>
+				<dir>%ROOT_DIR%/work</dir>
+			</makeDir>
+		</startUpActivities>
+		<exportActivities>			
+			<exportDataSetActivity>
+				<moduleInstanceId>modify_py</moduleInstanceId>
+			</exportDataSetActivity>
+			 <exportRunFileActivity>
+				<exportFile>%ROOT_DIR%/RunInfo.xml</exportFile>
+			</exportRunFileActivity>
+		</exportActivities>
+		<executeActivities>
+			<executeActivity>
+				<command>
+					<executable>$python_exe$</executable>
+				</command>
+				<arguments>
+                    <argument>%WORK_DIR%/modified_mhydro_v2.py</argument>
+					<argument>$model_root_dir$/$relative_setup_path$</argument>
+					<argument>%ROOT_DIR%/RunInfo.xml</argument>							
+				</arguments>
+				<logFile>
+					<file>%WORK_DIR%/ModifyMhydroFile.log</file>
+					<errorLinePattern>*ERROR*</errorLinePattern>
+					<warningLinePattern>*WARNING*</warningLinePattern>
+					<infoLinePattern>*INFO*</infoLinePattern>
+				</logFile>
+				<timeOut>10000000</timeOut>
+				<ignoreDiagnostics>true</ignoreDiagnostics>
+			</executeActivity>			
+		</executeActivities>
+	</activities>
+</generalAdapterRun>

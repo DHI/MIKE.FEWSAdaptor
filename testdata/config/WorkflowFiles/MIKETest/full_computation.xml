@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflow.xsd" version="1.1">
+	<activity>
+		<properties>
+			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="dfs0_relative_path" value="tide.dfs0"/>
+			<string key= "module_instance" value="importDFS0"/>
+			<string key= "timeSeriesType" value="external historical"/>
+			<string key=  "parameterId" value="H.obs"/>
+			<string key=  "locationsetId" value="tide"/>		
+			<string key=  "parameter_type" value="instantaneous"/>
+			<string key="pi_name" value="pi-input.xml"/>
+            <int key=  "ts_multiplier" value="1"/>
+			<string key="map_name" value="pi2dfs0"/>
+		</properties>
+		<moduleInstanceId>PI2DFS0</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>	
+			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="dfs0_relative_path" value="Evapotranspiration.dfs0"/>
+			<string key= "module_instance" value="importDFS0"/>
+			<string key= "timeSeriesType" value="external historical"/>
+			<string key=  "parameterId" value="ETref.obs"/>
+			<string key=  "locationsetId" value="catchment"/>		
+			<string key=  "parameter_type" value="instantaneous"/>
+			<int key=  "ts_multiplier" value="24"/>			
+			<string key="pi_name" value="pi-input.xml"/>
+			<string key="map_name" value="pi2dfs0"/>
+		</properties>
+		<moduleInstanceId>PI2DFS0</moduleInstanceId>
+	</activity>
+	
+	<activity>
+		<properties>		
+			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="dfs0_relative_path" value="Rainfall1993-2003A.dfs0"/>
+			<string key= "module_instance" value="importDFS0"/>
+			<string key= "timeSeriesType" value="external historical"/>
+			<string key=  "parameterId" value="P.obs"/>
+			<string key=  "locationsetId" value="forecastedYR"/>		
+			<string key=  "parameter_type" value="instantaneous"/>
+			<string key="pi_name" value="pi-input.xml"/>
+			<string key="map_name" value="pi2dfs0"/>
+            <int key=  "ts_multiplier" value="24"/>
+		</properties>
+		<moduleInstanceId>PI2DFS0</moduleInstanceId>
+	</activity>
+	
+	<activity>
+		<properties>		
+			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="dfs0_relative_path" value="Rainfall1993-2003B.dfs0"/>
+			<string key= "module_instance" value="importDFS0"/>
+			<string key= "timeSeriesType" value="external historical"/>
+			<string key=  "parameterId" value="P.obs"/>
+			<string key=  "locationsetId" value="forecastedYR"/>		
+			<string key=  "parameter_type" value="instantaneous"/>
+			<string key="pi_name" value="pi-input.xml"/>
+			<string key="map_name" value="pi2dfs0"/>
+            <int key=  "ts_multiplier" value="24"/>
+		</properties>
+		<moduleInstanceId>PI2DFS0</moduleInstanceId>
+	</activity>
+	
+	<activity>
+		<properties>
+			<!-- General -->
+			<string key="mike_exe" value="c:\Program Files (x86)\DHI\MIKE Zero\2021\bin\x64\DHI.Mike1D.Application.exe"/>
+			<string key="model_root_dir" value="c:\fews\fewsMIKEHydro\setup"/>
+			<string key="relative_setup_path" value="NAPA RIVER Simple training.mhydro"/>
+		</properties>
+		<moduleInstanceId>modify_and_run</moduleInstanceId>
+	</activity>
+	<activity>
+		<properties>
+			<!-- General -->
+			<string key="res1d_file" value="c:\fews\fewsMIKEHydro\setup\NAPA RIVER Simple training.mhydro - Result Files\HD_Napa.res1d" />
+			<string key="pi-output" value="pi-output.xml"/>
+			<string key="selection_file" value=""/>
+		</properties>
+		<moduleInstanceId>Res1D2PI</moduleInstanceId>
+	</activity>
+</workflow>
