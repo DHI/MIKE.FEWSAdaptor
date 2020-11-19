@@ -4,20 +4,19 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using System.Xml.Linq;
 
 namespace FewsCommon.TimeSeriesNS
 {
-	/// <summary>
-	/// Write TS memory data structure to FEWS PI file
-	/// </summary>
+    /// <summary>
+    /// Write TS memory data structure to FEWS PI file
+    /// </summary>
     public class PIWriter
     {
-		/// <summary>
-		/// Write PI file
-		/// </summary>
-		/// <param name="filePath">PI file path</param>
-		/// <param name="pis">TS memory data structure</param>
+        /// <summary>
+        /// Write PI file
+        /// </summary>
+        /// <param name="filePath">PI file path</param>
+        /// <param name="pis">TS memory data structure</param>
         public static void Write(string filePath, List<PI> pis)
         {
             var settings = new XmlWriterSettings();

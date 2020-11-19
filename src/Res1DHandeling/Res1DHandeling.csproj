@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,88 +30,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr4.Runtime, Version=4.4.0.0, Culture=neutral, PublicKeyToken=bb1075973a9370c4, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Math.Expression.18.0.0\lib\net472\Antlr4.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.DHIfl, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.DHIfl.18.0.0\lib\net472\DHI.DHIfl.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Generic, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Generic.18.0.0\lib\net472\DHI.Generic.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Generic.MikeZero.DFS, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.DFS.18.0.0\lib\netstandard2.0\DHI.Generic.MikeZero.DFS.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Generic.MikeZero.EUM, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.EUM.18.0.0\lib\netstandard2.0\DHI.Generic.MikeZero.EUM.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Math.Expression, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Math.Expression.18.0.0\lib\net472\DHI.Math.Expression.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.BoundaryModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.BoundaryModule.18.0.0\lib\net472\DHI.Mike1D.BoundaryModule.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.ControlModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.ControlModule.18.0.0\lib\net472\DHI.Mike1D.ControlModule.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.CrossSectionModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.CrossSectionModule.18.0.0\lib\net472\DHI.Mike1D.CrossSectionModule.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.DataAssimilationModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.DataAssimilationModule.18.0.0\lib\net472\DHI.Mike1D.DataAssimilationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.Engine, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.Engine.18.0.0\lib\net472\DHI.Mike1D.Engine.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.FloodMap, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.FloodMap.18.0.0\lib\net472\DHI.Mike1D.FloodMap.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.Generic, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.Generic.18.0.0\lib\net472\DHI.Mike1D.Generic.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.HDParameterDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.HDParameterDataAccess.18.0.0\lib\net472\DHI.Mike1D.HDParameterDataAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.Mike1DDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.Mike1DDataAccess.18.0.0\lib\net472\DHI.Mike1D.Mike1DDataAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.MzCouplings, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.Engine.18.0.0\lib\net472\DHI.Mike1D.MzCouplings.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.NetworkDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.NetworkDataAccess.18.0.0\lib\net472\DHI.Mike1D.NetworkDataAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.Optimization, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.Engine.18.0.0\lib\net472\DHI.Mike1D.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.RainfallRunoffModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.RainfallRunoffModule.18.0.0\lib\net472\DHI.Mike1D.RainfallRunoffModule.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.ResultDataAccess, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.ResultDataAccess.18.0.0\lib\net472\DHI.Mike1D.ResultDataAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.SimLauncher, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.SimLauncher.18.0.0\lib\net472\DHI.Mike1D.SimLauncher.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike1D.StructureModule, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Mike1D.StructureModule.18.0.0\lib\net472\DHI.Mike1D.StructureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.PFS, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.PFS.18.0.0\lib\netstandard2.0\DHI.PFS.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Projections, Version=18.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <HintPath>..\packages\DHI.Projections.18.0.0\lib\netstandard2.0\DHI.Projections.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -118,13 +43,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FewsCommon\FewsCommon.csproj">
       <Project>{0dbde6ab-ded6-49cc-ab3e-119fe4c2ce45}</Project>
       <Name>FewsCommon</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DHI.Mike1D.Generic">
+      <Version>19.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="DHI.Mike1D.ResultDataAccess">
+      <Version>19.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
