@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace FewsCommon
 {
-	/// <summary>
-	/// Can be used for the cutting out manually edited values on the end of TS
-	/// </summary>
+    /// <summary>
+    /// Can be used for the cutting out manually edited values on the end of TS
+    /// </summary>
     public class InputManipulator
     {
         public InputManipulator()
@@ -17,10 +17,10 @@ namespace FewsCommon
 
         }
 
-		/// <summary>
-		/// Truncate manually added  values on the end of given TS
-		/// </summary>
-		/// <param name="pi"></param>
+        /// <summary>
+        /// Truncate manually added  values on the end of given TS
+        /// </summary>
+        /// <param name="pi"></param>
         public void TruncateTsManualEnd(PI pi)
         {
             for (int i = 0; i < pi.TimeSeries.Count; i++)

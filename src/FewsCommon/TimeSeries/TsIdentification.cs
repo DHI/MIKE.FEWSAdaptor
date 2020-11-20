@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FewsCommon.TimeSeries
 {
-	/// <summary>
-	/// Structure containing TS metadata. Used for selection...
-	/// </summary>
+    /// <summary>
+    /// Structure containing TS metadata. Used for selection...
+    /// </summary>
     public class TsIdentification
     {
         private string _locationId = string.Empty;
@@ -17,13 +17,13 @@ namespace FewsCommon.TimeSeries
         private string _ensembleId = "";
         private string _ensembleMemberId = "";
 
-		/// 
-		/// <param name="locationId">LocationId</param>
-		/// <param name="parmId">ParametrId (ItemInfo.Quantity.Item + ItemInfo.Quantity.
-		/// Unit in MZ))</param>
-		/// <param name="tsType">TS type. Default instantaneous.</param>
-		/// <param name="ensembleId">EnsembleId</param>
-		/// <param name="ensembleMemberId">Ensemble MemberId</param>
+        /// 
+        /// <param name="locationId">LocationId</param>
+        /// <param name="parmId">ParametrId (ItemInfo.Quantity.Item + ItemInfo.Quantity.
+        /// Unit in MZ))</param>
+        /// <param name="tsType">TS type. Default instantaneous.</param>
+        /// <param name="ensembleId">EnsembleId</param>
+        /// <param name="ensembleMemberId">Ensemble MemberId</param>
         public TsIdentification(string locationId, string parmId, string tsType, string ensembleId, string ensembleMemberId)
         {
             _locationId = locationId ?? throw new ArgumentNullException(nameof(locationId));
@@ -42,25 +42,25 @@ namespace FewsCommon.TimeSeries
             EnsembleMemberId = ts.EnsembleMemberId;
         }
 
-		/// <summary>
-		/// LocationId
-		/// </summary>
+        /// <summary>
+        /// LocationId
+        /// </summary>
         public string LocationId { get => _locationId; set => _locationId = value; }
-		/// <summary>
-		/// ParametrId (ItemInfo.Quantity.Item + ItemInfo.Quantity.Unit in MZ))
-		/// </summary>
+        /// <summary>
+        /// ParametrId (ItemInfo.Quantity.Item + ItemInfo.Quantity.Unit in MZ))
+        /// </summary>
         public string ParmId { get => parmId; set => parmId = value; }
-		/// <summary>
-		/// TS type. Default instantaneous.
-		/// </summary>
+        /// <summary>
+        /// TS type. Default instantaneous.
+        /// </summary>
         public string TsType { get => _tsType; set => _tsType = value; }
-		/// <summary>
-		/// EnsembleId
-		/// </summary>
+        /// <summary>
+        /// EnsembleId
+        /// </summary>
         public string EnsembleId { get => _ensembleId; set => _ensembleId = value; }
-		/// <summary>
-		/// EnsembleMemberId
-		/// </summary>
+        /// <summary>
+        /// EnsembleMemberId
+        /// </summary>
         public string EnsembleMemberId { get => _ensembleMemberId; set => _ensembleMemberId = value; }
     }
 }

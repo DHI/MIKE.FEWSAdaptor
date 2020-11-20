@@ -8,31 +8,31 @@ using System.Xml;
 
 namespace FewsCommon
 {
-	/// <summary>
-	/// Parse FEWS RuntimeInfo .xml and provide list of Modifiers.
-	/// </summary>
+    /// <summary>
+    /// Parse FEWS RuntimeInfo .xml and provide list of Modifiers.
+    /// </summary>
     public class ParseModifiers
     {
         private string _fileName;
         private IDictionary<string, object> _parameters;
-		/// 
-		/// <param name="fileName">RuntimeInfo file name / path</param>
+        /// 
+        /// <param name="fileName">RuntimeInfo file name / path</param>
         public ParseModifiers(string fileName)
         {
             _fileName = fileName;
             _parameters = new Dictionary<string, object>();
         }
-		/// <summary>
-		/// Get modifiers (name and value) dictionaty
-		/// </summary>
+        /// <summary>
+        /// Get modifiers (name and value) dictionaty
+        /// </summary>
         public IDictionary<string, object> Getparameters()
         {
             return _parameters;
         }
 
-		/// <summary>
-		/// Load RuntimeInfo file
-		/// </summary>
+        /// <summary>
+        /// Load RuntimeInfo file
+        /// </summary>
         public bool LoadFile()
         {
             using (XmlReader reader = XmlReader.Create(_fileName))

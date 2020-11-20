@@ -10,23 +10,23 @@ using FewsCommon.TimeSeriesNS;
 
 namespace Dfs0Handeling
 {
-	/// <summary>
-	/// Read data from dfs0 file to FEWS PI memory data structure
-	/// </summary>
+    /// <summary>
+    /// Read data from dfs0 file to FEWS PI memory data structure
+    /// </summary>
     public class ReadDfs0
     {
-		/// <summary>
-		/// Read Time series data DFS0 to FEWS PI memory data structure
-		/// </summary>
-		/// <param name="pi">Memory data structure where content of the DFS0 file will be
-		/// add</param>
-		/// <param name="rootPath">Root directory where dfs0 files are placed</param>
-		/// <param name="relativePath">Full file path relative to rootPath</param>
-		/// <param name="ensembleId">Ensemble Id identifying where to put data from
-		/// file</param>
-		/// <param name="ensembleMemberId">Ensemble member Id identifying where to put data
-		/// from file</param>
-		/// <param name="ensembleMemberIndex">Ensemble member index</param>
+        /// <summary>
+        /// Read Time series data DFS0 to FEWS PI memory data structure
+        /// </summary>
+        /// <param name="pi">Memory data structure where content of the DFS0 file will be
+        /// add</param>
+        /// <param name="rootPath">Root directory where dfs0 files are placed</param>
+        /// <param name="relativePath">Full file path relative to rootPath</param>
+        /// <param name="ensembleId">Ensemble Id identifying where to put data from
+        /// file</param>
+        /// <param name="ensembleMemberId">Ensemble member Id identifying where to put data
+        /// from file</param>
+        /// <param name="ensembleMemberIndex">Ensemble member index</param>
         public bool ReadDfs0File(ref PI pi, string rootPath, string relativePath, string ensembleId, string ensembleMemberId, int ensembleMemberIndex)
         {
             var dfs0File = DfsFileFactory.DfsGenericOpen(Path.Combine(rootPath, relativePath));

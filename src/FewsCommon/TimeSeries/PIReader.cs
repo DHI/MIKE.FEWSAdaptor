@@ -6,15 +6,15 @@ using System.Xml;
 
 namespace FewsCommon.TimeSeriesNS
 {
-	/// <summary>
-	/// Reader FEWS Time series format file to memory data structure
-	/// </summary>
+    /// <summary>
+    /// Reader FEWS Time series format file to memory data structure
+    /// </summary>
     public class PIReader
     {
-		/// <summary>
-		/// Pars FEWS PI file to memory time series data structure
-		/// </summary>
-		/// <param name="path">PI file path</param>
+        /// <summary>
+        /// Pars FEWS PI file to memory time series data structure
+        /// </summary>
+        /// <param name="path">PI file path</param>
         public static PI Read(string path)
         {
             var pi = new PI();

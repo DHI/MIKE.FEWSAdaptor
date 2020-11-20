@@ -12,26 +12,26 @@ using System.Threading.Tasks;
 
 namespace Dfs0Handeling
 {
-	/// <summary>
-	/// Write Time series data from FEWS PI memory data structure to DFS0
-	/// </summary>
+    /// <summary>
+    /// Write Time series data from FEWS PI memory data structure to DFS0
+    /// </summary>
     public class Dfs0Writer
     {
-		/// 
-		/// <param name="pi">List of FEWS TimeSeries</param>
-		/// <param name="rootPath">Root path where dfs0 files will be placed to. </param>
-		/// <param name="startTime">Start time to be written to dfs0</param>
-		/// <param name="endTime">End time to be written to dfs0</param>
-		/// <param name="relativePath">Full file path relative to rootPath. If empty file
-		/// name generated based on PI content.</param>
-		/// <param name="ensembleId">Ensemble Id identifying what TS write to file.
-		/// </param>
-		/// <param name="ensembleMemberId">Identification of ensemble to be
-		/// exported</param>
-		/// <param name="prefix">Prefix added to the TS location</param>
-		/// <param name="parameterType">DFS0 Parameter type. Available values instantaneous,
-		/// accumulated, meanstepbackward, meanstepforward, stepaccumulated, Default -
-		/// instantaneous, </param>
+        /// 
+        /// <param name="pi">List of FEWS TimeSeries</param>
+        /// <param name="rootPath">Root path where dfs0 files will be placed to. </param>
+        /// <param name="startTime">Start time to be written to dfs0</param>
+        /// <param name="endTime">End time to be written to dfs0</param>
+        /// <param name="relativePath">Full file path relative to rootPath. If empty file
+        /// name generated based on PI content.</param>
+        /// <param name="ensembleId">Ensemble Id identifying what TS write to file.
+        /// </param>
+        /// <param name="ensembleMemberId">Identification of ensemble to be
+        /// exported</param>
+        /// <param name="prefix">Prefix added to the TS location</param>
+        /// <param name="parameterType">DFS0 Parameter type. Available values instantaneous,
+        /// accumulated, meanstepbackward, meanstepforward, stepaccumulated, Default -
+        /// instantaneous, </param>
         public bool WriteDfs0File(PI pi, string rootPath, DateTime startTime, DateTime endTime, string relativePath = "", string ensembleId = "", string ensembleMemberId ="", string prefix = "", string parameterType = "")
         {
             var fileNames = new Dictionary<string, IList<TsIdentification>>();
@@ -43,7 +43,7 @@ namespace Dfs0Handeling
                 foreach (var ts in pi.TimeSeries)
                 {
                     var array = ts.LocationId.Split('|');
-                var location = ts.LocationId;
+                    var location = ts.LocationId;
                     string fullName = Path.Combine(rootPath, relativePath);
                     if (array.Length > 1)
                     {
@@ -75,16 +75,16 @@ namespace Dfs0Handeling
             }
             return true;
         }
-		/// 
-		/// <param name="fileName">Output DFS0 file path</param>
-		/// <param name="pi">Memory data structure containing TS</param>
-		/// <param name="list">List of TS identification selecting  TS to write in file.
-		/// </param>
-		/// <param name="startTime">Date/time of first time step to be written to
-		/// file</param>
-		/// <param name="endTime">Date/time of last time step to be written to
-		/// file</param>
-		/// <param name="parameterType"></param>
+        /// 
+        /// <param name="fileName">Output DFS0 file path</param>
+        /// <param name="pi">Memory data structure containing TS</param>
+        /// <param name="list">List of TS identification selecting  TS to write in file.
+        /// </param>
+        /// <param name="startTime">Date/time of first time step to be written to
+        /// file</param>
+        /// <param name="endTime">Date/time of last time step to be written to
+        /// file</param>
+        /// <param name="parameterType"></param>
         private void  _WriteOneFile(string fileName, PI pi, IList<TsIdentification> list, DateTime startTime, DateTime endTime, string parameterType)
         {
             var allTimeSteps = new List<DateTime>();

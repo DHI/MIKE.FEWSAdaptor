@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace FewsCommon
 {
-	/// <summary>
-	/// All thresholds used in the system
-	/// </summary>
+    /// <summary>
+    /// All thresholds used in the system
+    /// </summary>
     public class Thresholds
     {
         internal IDictionary<string, ThresholdValue> _thresholds = new Dictionary<string, ThresholdValue>();
 
-		/// <summary>
-		/// Get all thresholds as Dictionary
-		/// </summary>
+        /// <summary>
+        /// Get all thresholds as Dictionary
+        /// </summary>
         public IDictionary<string, ThresholdValue> GetAll()
         {
             return _thresholds;
@@ -25,11 +25,11 @@ namespace FewsCommon
             string result = $"<{locationId}><{parameterId}><{thresholdId}>";
             return result;
         }
-		/// <summary>
-		/// Add one threshold to Dictionary. ComposedId is created as composition of
-		/// Location, Parametr Id and  individual ThresholdId
-		/// </summary>
-		/// <param name="hresholdValue"></param>
+        /// <summary>
+        /// Add one threshold to Dictionary. ComposedId is created as composition of
+        /// Location, Parametr Id and  individual ThresholdId
+        /// </summary>
+        /// <param name="hresholdValue"></param>
         public bool AddThreshold(ThresholdValue hresholdValue)
         {
             string id = _CreateId(hresholdValue.LocationId, hresholdValue.ParameterId, hresholdValue.ThresholdId);
@@ -43,9 +43,9 @@ namespace FewsCommon
                 return true;
             }            
         }
-		/// <summary>
-		/// Get all unique thresholdComposed Ids
-		/// </summary>
+        /// <summary>
+        /// Get all unique thresholdComposed Ids
+        /// </summary>
         public IList<string> GethresholdIds()
         {
             var result = new List<string>();
@@ -59,10 +59,10 @@ namespace FewsCommon
             return result;
         }
 
-		/// <summary>
-		/// Get value based on Composed ThresholdId.
-		/// </summary>
-		/// <param name="id"></param>
+        /// <summary>
+        /// Get value based on Composed ThresholdId.
+        /// </summary>
+        /// <param name="id"></param>
         public double GetThresholdValue(string id)
         {
             if (_thresholds.ContainsKey(id))
@@ -74,13 +74,13 @@ namespace FewsCommon
                 return double.MaxValue;
             }
         }
-		/// <summary>
-		/// Get threshold value based on LocationId, parameterId and tresholdId
-		/// </summary>
-		/// <param name="locationId">Location ID</param>
-		/// <param name="parameterId">ParameterId (ItemInfo.Quantity.Item + ItemInfo.
-		/// Quantity.Unit in MZ)</param>
-		/// <param name="thresholdId">TresholdId (name)</param>
+        /// <summary>
+        /// Get threshold value based on LocationId, parameterId and tresholdId
+        /// </summary>
+        /// <param name="locationId">Location ID</param>
+        /// <param name="parameterId">ParameterId (ItemInfo.Quantity.Item + ItemInfo.
+        /// Quantity.Unit in MZ)</param>
+        /// <param name="thresholdId">TresholdId (name)</param>
         public double GetThresholdValue(string locationId, string parameterId, string thresholdId)
         {
             var id = _CreateId(locationId, parameterId, thresholdId);

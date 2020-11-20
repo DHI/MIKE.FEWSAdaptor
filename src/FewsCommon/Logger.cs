@@ -5,14 +5,14 @@ using System.Text;
 
 namespace FewsCommon
 {
-	/// <summary>
-	/// Used for logging to FEWS log file
-	/// </summary>
+    /// <summary>
+    /// Used for logging to FEWS log file
+    /// </summary>
     public static class Logger
     {
-		/// <summary>
-		/// Log level
-		/// </summary>
+        /// <summary>
+        /// Log level
+        /// </summary>
         public enum TypeEnum : int
         {
             Info,
@@ -24,12 +24,12 @@ namespace FewsCommon
         private static bool _buffered;
         private static StringBuilder _sb;
 
-		/// <summary>
-		/// Initialize logger
-		/// </summary>
-		/// <param name="path">Log file Name</param>
-		/// <param name="buffered">If true, buffered to memory. If false - write
-		/// immediately to file (slower)</param>
+        /// <summary>
+        /// Initialize logger
+        /// </summary>
+        /// <param name="path">Log file Name</param>
+        /// <param name="buffered">If true, buffered to memory. If false - write
+        /// immediately to file (slower)</param>
         public static void Initialize(string path, bool buffered)
         {
             _path = path;
@@ -49,11 +49,11 @@ namespace FewsCommon
             }
         }
 
-		/// <summary>
-		/// Add one log message
-		/// </summary>
-		/// <param name="type">Log Level</param>
-		/// <param name="text">Log message text</param>
+        /// <summary>
+        /// Add one log message
+        /// </summary>
+        /// <param name="type">Log Level</param>
+        /// <param name="text">Log message text</param>
         public static void AddLog(TypeEnum type, string text)
         {
             if (_buffered)
@@ -70,9 +70,9 @@ namespace FewsCommon
             }
         }
 
-		/// <summary>
-		/// Write logs from memory to file.
-		/// </summary>
+        /// <summary>
+        /// Write logs from memory to file.
+        /// </summary>
         public static void Write()
         {
             if (_sb != null)

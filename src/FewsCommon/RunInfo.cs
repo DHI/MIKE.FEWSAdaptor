@@ -9,9 +9,9 @@ using System.Xml;
 
 namespace FewsCommon
 {
-	/// <summary>
-	/// Get T0 (TOF) from Runtime.Info as GMT
-	/// </summary>
+    /// <summary>
+    /// Get T0 (TOF) from Runtime.Info as GMT
+    /// </summary>
     public class RunInfo
     {
         public static DateTime GetT0InLocalTime(string runInfoFilePath)

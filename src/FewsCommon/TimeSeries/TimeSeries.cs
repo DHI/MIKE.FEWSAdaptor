@@ -6,91 +6,91 @@ using System.Text;
 
 namespace FewsCommon.TimeSeriesNS
 {
-	/// <summary>
-	/// Time series data structure
-	/// </summary>
+    /// <summary>
+    /// Time series data structure
+    /// </summary>
     public class TimeSeries
     {
-		/// <summary>
-		/// FEWS TS type. Default instantaneous.
-		/// </summary>
+        /// <summary>
+        /// FEWS TS type. Default instantaneous.
+        /// </summary>
         public string Type { get; set; }
-		/// <summary>
-		/// TS location id
-		/// </summary>
+        /// <summary>
+        /// TS location id
+        /// </summary>
         public string LocationId { get; set; }
-		/// <summary>
-		/// FEWS Parameter ID
-		/// </summary>
+        /// <summary>
+        /// FEWS Parameter ID
+        /// </summary>
         public string ParameterId { get; set; }
-		/// <summary>
-		/// Time step for equidistant TS
-		/// </summary>
+        /// <summary>
+        /// Time step for equidistant TS
+        /// </summary>
         public TimeSpan? TimeStep { get; set; }
-		/// <summary>
-		/// Start date
-		/// </summary>
+        /// <summary>
+        /// Start date
+        /// </summary>
         public DateTime? StartDate { get; set; }
-		/// <summary>
-		/// End date/time (last time step)
-		/// </summary>
+        /// <summary>
+        /// End date/time (last time step)
+        /// </summary>
         public DateTime? EndDate { get; set; }
-		/// <summary>
-		/// TS missing value
-		/// </summary>
+        /// <summary>
+        /// TS missing value
+        /// </summary>
         public double? MissVal { get; set; }
-		/// <summary>
-		/// Station ID. Created during RES1D import.
-		/// </summary>
+        /// <summary>
+        /// Station ID. Created during RES1D import.
+        /// </summary>
         public string StationName { get; set; }
-		/// <summary>
-		/// Latitude point coordinate
-		/// </summary>
+        /// <summary>
+        /// Latitude point coordinate
+        /// </summary>
         public double? Lat { get; set; }
-		/// <summary>
-		/// Longitudinal point coordinate
-		/// </summary>
+        /// <summary>
+        /// Longitudinal point coordinate
+        /// </summary>
         public double? Lon { get; set; }
-		/// <summary>
-		/// X coordinate
-		/// </summary>
+        /// <summary>
+        /// X coordinate
+        /// </summary>
         public double? X { get; set; }
-		/// <summary>
-		/// Y coordinate
-		/// </summary>
+        /// <summary>
+        /// Y coordinate
+        /// </summary>
         public double? Y { get; set; }
-		/// <summary>
-		/// Z coordinate
-		/// </summary>
+        /// <summary>
+        /// Z coordinate
+        /// </summary>
         public double? Z { get; set; }
-		/// <summary>
-		/// TS units
-		/// </summary>
+        /// <summary>
+        /// TS units
+        /// </summary>
         public string Units { get; set; }
-		/// <summary>
-		/// Time of forecast (time0 in FEWS)
-		/// </summary>
+        /// <summary>
+        /// Time of forecast (time0 in FEWS)
+        /// </summary>
         public DateTime? ForecastDate { get; set; }
-		/// <summary>
-		/// Ensemble Id identifying TS
-		/// </summary>
+        /// <summary>
+        /// Ensemble Id identifying TS
+        /// </summary>
         public string EnsembleId { get; set; }
-		/// <summary>
-		/// Ensemble index of  TS
-		/// </summary>
+        /// <summary>
+        /// Ensemble index of  TS
+        /// </summary>
         public int EnsembleMemberIndex { get; set; }
-		/// <summary>
-		/// Ensemble Member Id identifying TS
-		/// </summary>
+        /// <summary>
+        /// Ensemble Member Id identifying TS
+        /// </summary>
         public string EnsembleMemberId { get; set; }
-		/// <summary>
-		/// Info if TS was created as merge of more TS from PI file
-		/// </summary>
+        /// <summary>
+        /// Info if TS was created as merge of more TS from PI file
+        /// </summary>
         public bool HasBeenMerged { get; set; }
 
-		/// <summary>
-		/// Dictionary of time step and TS value
-		/// </summary>
+        /// <summary>
+        /// Dictionary of time step and TS value
+        /// </summary>
         public Dictionary<DateTime, TSValue> Values { get; set; }
 
 
@@ -100,12 +100,12 @@ namespace FewsCommon.TimeSeriesNS
 
         }
 
-		/// <summary>
-		/// Get value for given time
-		/// </summary>
-		/// <param name="time">Time to obtain value for</param>
-		/// <param name="extrapolate">Indicate if extrapolate outside start, end time
-		/// interval</param>
+        /// <summary>
+        /// Get value for given time
+        /// </summary>
+        /// <param name="time">Time to obtain value for</param>
+        /// <param name="extrapolate">Indicate if extrapolate outside start, end time
+        /// interval</param>
         public double GetValue(DateTime time, bool extrapolate = false)
         {
             if (Values.ContainsKey(time))
@@ -178,9 +178,9 @@ namespace FewsCommon.TimeSeriesNS
             return 0;
         }
 
-		/// <summary>
-		/// Create copy of TS
-		/// </summary>
+        /// <summary>
+        /// Create copy of TS
+        /// </summary>
         public TimeSeries CreateCopy()
         {
             var newTs = new TimeSeries();
