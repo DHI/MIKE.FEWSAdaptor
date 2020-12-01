@@ -3,7 +3,7 @@
 	<activity>
 		<properties>
 			<!-- General -->
-			<string key="mike_model_dir" value="c:/fews/fewsMIKEHydro/data"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$/data"/>
 			<string key="dfs0_relative_path" value="tide.dfs0"/>
 			<string key= "module_instance" value="importDFS0"/>
 			<string key= "timeSeriesType" value="external historical"/>
@@ -12,13 +12,14 @@
 			<string key=  "parameter_type" value="instantaneous"/>
 			<string key="pi_name" value="pi-input.xml"/>
 			<string key="map_name" value="pi2dfs0"/>
+			<int key=  "ts_multiplier" value="1"/>
 		</properties>
 		<moduleInstanceId>PI2DFS0</moduleInstanceId>	
 		</activity>				
 		<activity>
 		<properties>
 			<!-- General -->
-			<string key="mike_model_dir" value="c:/fews/fewsMIKEHydro/data"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$/data"/>
 			<string key="dfs0_relative_path" value="P.dfs0"/>
 			<string key= "module_instance" value="importDFS0"/>
 			<string key= "timeSeriesType" value="external historical"/>
@@ -27,6 +28,7 @@
 			<string key=  "parameter_type" value="instantaneous"/>
 			<string key="pi_name" value="pi-input.xml"/>
 			<string key="map_name" value="pi2dfs0"/>
+			<int key=  "ts_multiplier" value="1"/>
 		</properties>
 		<moduleInstanceId>PI2DFS0</moduleInstanceId>	
 		</activity>				

@@ -3,7 +3,7 @@
 	<activity>
 		<properties>
 			<!-- General -->
-			<string key="res1d_file" value="c:/testData/INITIAK_Condition/NAPA RIVER Simple training.mhydro - Result Files/HD_Napa.res1d" />
+			<string key="res1d_file" value="$FEWSMIKEHYDRO_DIR$\data\result\HD_Napa.res1d" />
 			<string key="pi-output" value="pi-output.xml"/>
 			<string key="selection_file" value=""/>
 		</properties>

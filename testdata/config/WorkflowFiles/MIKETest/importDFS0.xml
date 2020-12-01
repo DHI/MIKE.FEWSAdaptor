@@ -2,7 +2,7 @@
 <workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflow.xsd" version="1.1">
 	<activity>
 		<properties>			
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\data\\ForecastedYR\ForecastedYR Boundary\"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\data\ForecastedYR\ForecastedYR Boundary\"/>
 			<string key="dfs0_reletive_path" value="NapaRainfall.dfs0"/>
 			<string key="pi_name" value="pi-input0.xml"/>
             <string key="map_name" value="dfs02pi"/>
@@ -15,7 +15,7 @@
 	</activity>
 	<activity>
 		<properties>			
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\data\\ForecastedYR\ForecastedYR Boundary\"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\data\ForecastedYR\ForecastedYR Boundary\"/>
 			<string key="dfs0_reletive_path" value="StHelenaRainfall.dfs0"/>
 			<string key="pi_name" value="pi-input1.xml"/>
 			<string key="map_name" value="dfs02pi"/>
@@ -28,7 +28,7 @@
 	</activity>
 	<activity>
 		<properties>			
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\data\LongTermData"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\data\LongTermData"/>
 			<string key="dfs0_reletive_path" value="tide.dfs0"/>
 			<string key="pi_name" value="pi-input2.xml"/>
 			<string key="parameterId" value="H.obs"/>
@@ -41,7 +41,7 @@
 	</activity>	
 	<activity>
 		<properties>			
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\data\LongTermData"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\data\LongTermData"/>
 			<string key="dfs0_reletive_path" value="Evapotranspiration.dfs0"/>
 			<string key="pi_name" value="pi-input3.xml"/>
 			<string key="map_name" value="dfs02pi"/>
@@ -54,7 +54,7 @@
 	</activity>	
 	<!--activity>
 		<properties>			
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\data\LongTermData"/>
+			<string key="mike_model_dir" value="FEWSMIKEHYDRO_DIRdata\LongTermData"/>
 			<string key="dfs0_reletive_path" value="Rainfall.dfs0"/>
 			<string key="pi_name" value="pi-input3.xml"/>
 			<string key="map_name" value="dfs02pi"/>
@@ -67,7 +67,7 @@
 	</activity-->
 	<activity>
 		<properties>			
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\data\USGS"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\data\USGS"/>
 			<string key="dfs0_reletive_path" value="St Helena_metric.dfs0"/>
 			<string key="pi_name" value="pi-input3.xml"/>
 			<string key="map_name" value="dfs02pi"/>
@@ -80,7 +80,7 @@
 	</activity>	
 	<activity>
 		<properties>			
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\data\USGS"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\data\USGS"/>
 			<string key="dfs0_reletive_path" value="Napa_metric.dfs0"/>
 			<string key="pi_name" value="pi-input3.xml"/>
 			<string key="map_name" value="dfs02pi"/>
