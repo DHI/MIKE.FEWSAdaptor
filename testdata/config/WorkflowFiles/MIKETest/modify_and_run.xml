@@ -4,8 +4,7 @@
 		<properties>
 			<!-- General -->
 			<string key="mike_exe" value="c:\Program Files (x86)\DHI\MIKE Zero\2021\bin\x64\DHI.Mike1D.Application.exe"/>
-			<!--string key="mike_exe" value="c:\fews\fewsMIKEHydro\test\run.bat"/-->
-			<string key="model_root_dir" value="c:\fews\fewsMIKEHydro\setup"/>
+			<string key="model_root_dir" value="$FEWSMIKEHYDRO_DIR$\setup"/>
 			<string key="relative_setup_path" value="NAPA RIVER Simple training.mhydro"/>
 		</properties>
 		<moduleInstanceId>modify_and_run</moduleInstanceId>

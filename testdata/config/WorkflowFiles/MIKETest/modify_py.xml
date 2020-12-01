@@ -3,8 +3,8 @@
 	<activity>
 		<properties>
 			<!-- General -->
-			<string key="python_exe" value="c:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe"/>
-			<string key="model_root_dir" value="c:\fews\fewsMIKEHydro\setup"/>
+			<string key="python_exe" value="python.exe"/>
+			<string key="model_root_dir" value="$FEWSMIKEHYDRO_DIR$\setup"/>
 			<string key="relative_setup_path" value="NAPA RIVER Simple training.mhydro"/>
 		</properties>
 		<moduleInstanceId>modify_py</moduleInstanceId>

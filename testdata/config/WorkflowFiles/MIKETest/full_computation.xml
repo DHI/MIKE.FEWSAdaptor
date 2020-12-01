@@ -2,7 +2,7 @@
 <workflow xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflow.xsd" version="1.1">
 	<activity>
 		<properties>
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\setup\Time"/>
 			<string key="dfs0_relative_path" value="tide.dfs0"/>
 			<string key= "module_instance" value="importDFS0"/>
 			<string key= "timeSeriesType" value="external historical"/>
@@ -17,7 +17,7 @@
 	</activity>
 	<activity>
 		<properties>	
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\setup\Time"/>
 			<string key="dfs0_relative_path" value="Evapotranspiration.dfs0"/>
 			<string key= "module_instance" value="importDFS0"/>
 			<string key= "timeSeriesType" value="external historical"/>
@@ -33,7 +33,7 @@
 	
 	<activity>
 		<properties>		
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\setup\Time"/>
 			<string key="dfs0_relative_path" value="Rainfall1993-2003A.dfs0"/>
 			<string key= "module_instance" value="importDFS0"/>
 			<string key= "timeSeriesType" value="external historical"/>
@@ -49,7 +49,7 @@
 	
 	<activity>
 		<properties>		
-			<string key="mike_model_dir" value="c:\fews\fewsMIKEHydro\setup\Time"/>
+			<string key="mike_model_dir" value="$FEWSMIKEHYDRO_DIR$\setup\Time"/>
 			<string key="dfs0_relative_path" value="Rainfall1993-2003B.dfs0"/>
 			<string key= "module_instance" value="importDFS0"/>
 			<string key= "timeSeriesType" value="external historical"/>
@@ -67,7 +67,7 @@
 		<properties>
 			<!-- General -->
 			<string key="mike_exe" value="c:\Program Files (x86)\DHI\MIKE Zero\2021\bin\x64\DHI.Mike1D.Application.exe"/>
-			<string key="model_root_dir" value="c:\fews\fewsMIKEHydro\setup"/>
+			<string key="model_root_dir" value="$FEWSMIKEHYDRO_DIR$\setup"/>
 			<string key="relative_setup_path" value="NAPA RIVER Simple training.mhydro"/>
 		</properties>
 		<moduleInstanceId>modify_and_run</moduleInstanceId>
@@ -75,7 +75,7 @@
 	<activity>
 		<properties>
 			<!-- General -->
-			<string key="res1d_file" value="c:\fews\fewsMIKEHydro\setup\NAPA RIVER Simple training.mhydro - Result Files\HD_Napa.res1d" />
+			<string key="res1d_file" value="$FEWSMIKEHYDRO_DIR$\setup\NAPA RIVER Simple training.mhydro - Result Files\HD_Napa.res1d" />
 			<string key="pi-output" value="pi-output.xml"/>
 			<string key="selection_file" value=""/>
 		</properties>
