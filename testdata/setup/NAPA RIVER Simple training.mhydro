@@ -1,6 +1,6 @@
-// Created     : 2020-10-16 15:58:38
-// DLL         : C:\Program Files (x86)\DHI\MIKE OPERATIONS\2021\bin\x64\pfs2004.dll
-// Version     : 11.0.0.20286
+// Created     : 2020-12-1 13:12:35
+// DLL         : C:\Program Files (x86)\DHI\MIKE Zero\2021\bin\x64\pfs2004.dll
+// Version     : 19.0.0.14301
 
 [MIKEHYDRO]
    Version = 31
@@ -62,8 +62,8 @@
 
       [MH_SimSpec_SimPeriod]
          Touched = true
-         StartTime = '2020 01 11 00:00:00'
-         EndTime = '2020 01 25 00:00:00'
+         StartTime = '2020 1 12 12:0:0'
+         EndTime = '2020 1 17 12:0:0'
       EndSect  // MH_SimSpec_SimPeriod
 
       [MH_SimSpec_TimeStep]
@@ -287,10 +287,10 @@
       Touched = true
       [CoordinateSystem]
          Touched = true
-         X0 = -93785912.93321216
-         X1 = 80132962.73996681
-         Y0 = -36015911.17100548
-         Y1 = 40689983.59034259
+         X0 = -118519650.4276877
+         X1 = 104866700.2344423
+         Y0 = -47130438.77928244
+         Y1 = 51804511.19861954
          MapProjection = 'PROJCS["Google Maps - Mercator",GEOGCS["GCS_Google_Maps",DATUM["D_Google_Maps",SPHEROID["Google Maps (Sphere)",6378137,0]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],PARAMETER["Standard_Parallel_1",0],UNIT["Meter",1]]'
          FeatureProjection = 'PROJCS["California II, NAD 83",GEOGCS["Unused",DATUM["North American Datum 1983",SPHEROID["Geodetic Reference System 1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",2000000],PARAMETER["False_Northing",500000],PARAMETER["Central_Meridian",-122],PARAMETER["Standard_Parallel_1",38.33333333333334],PARAMETER["Standard_Parallel_2",39.83333333333334],PARAMETER["Latitude_Of_Origin",37.66666666666666],UNIT["Meter",1]]'
          DatumShiftType = 0
@@ -19809,7 +19809,7 @@
          Touched = true
          ObjectID = '5ae31152-4367-4dca-b5b1-a75b307d9605'
          UseHotstartFiles = true
-         HotstartList = '<CLOB:1,|Hotstart\RR_Napa_AddNAM.res1d|,false,"2020 01 11 06:00:00">'
+         HotstartList = '<CLOB:1,|.\Hotstart\RR_Napa_AddNAM.res1d|,false,"2020 01 11 06:00:00">'
       EndSect  // HotstartFiles
 
    EndSect  // CatchmentGroupPfs
@@ -21894,7 +21894,7 @@
          DataAssimitionMode = 0
          FirstUpdateStep = 0
          EnsembleSize = 200
-         TOF = '2020 01 15 00:00:00'
+         TOF = '2020 1 12 12:0:0'
          ForecastType = 0
       EndSect  // DAGeneralParameters
 
@@ -22141,7 +22141,7 @@
          DhiSEPfsListItemCount = 1
          MapGeneration = false
          DEMInput = false
-         ApplyDEM = false
+         ApplyDEM = true
          MapAdditionalFloodedAreas = false
          MapAdditionalFloodedAreasFilename = ||
          [MapResultDEMItemList]
