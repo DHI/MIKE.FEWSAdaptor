@@ -47,6 +47,9 @@ The adaptor tools supports working with ensemble time series in FEWS. For ensemb
 Build all in Visual Studio. Then run the BuildBin.bat to create binary folders and 
 BuildZip.bat to build zip files of each of the tools and place it to the FEWS config ModuleDataSetFiles folder.
 
+## Installing
+The tools are self contained and independent of MIKE software. I.e. it is not required to install any MIKE software to use the tools. It does require that the [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) for Visual Studio 2017 or later.
+
 ## Testing
 Install FEWS. Create FEWS project dir and copy there fews.exe and content of testdata dir. Modify sa_global.properties file and set MODEL_ROOT_DIR and FEWSMIKEHYDRO_DIR to the proper dir. Run FEWS and set FEWS Current system time to 12-1-2020. Test individual workflows. 
 
