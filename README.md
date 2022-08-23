@@ -1,18 +1,21 @@
 # MIKE FEWS adaptor
-The MIKE FEWS adaptor consist of a set of components for supporting integration 
-of the MIKE models into the FEWS system. 
+The MIKE FEWS adaptor consist of a set of components for supporting integration of the MIKE models into the FEWS system.
 
-The adaptor is currently designed for supporting MIKE Hydro River models and the MIKE 1D engine.
+The adaptor is currently designed and tested for supporting MIKE Hydro River models and the MIKE 1D engine. Integration of MIKE+ and MIKE 11 models is also possible. It can also be used as a starting point for integration of other MIKE models into FEWS.
 
+## Disclaimer
+The MIKE FEWS adaptor is provided as is. Issues and questions can be posted here on GitHub. Any support from DHI can be provided on a consultancy basis, i.e. it is not included in an SMA/subscription.
+
+## Background
 A MIKE Hydro River setup consist of several files. In the FEWS environment, the following steps 
 are supported:
 
 * Creating Time series in DFS0 format, from TS values from the FEWS system.
   These time series typically defining boundary conditions and external forcings. 
 * Editing of model setup file. For the MHYDRO setup file, the following can be modified:
-  * Start time
-  * End time
-  * Time of forecast (for Data Assimilation runs)
+    * Start time
+    * End time
+    * Time of forecast (for Data Assimilation runs)
 * Selected results (time series) computed by the engine and stored in a .res1d result file 
   can be imported to FEWS.
 
@@ -20,10 +23,10 @@ The following components are provided:
 * Libraries in form of .NET DLL's, providing support for
   conversion between FEWS PI (xml) files and DHI files DFS0 and Res1D.
 * Tools (exe files) for:
-  * Conversion between DFS0 and PI files
-  * Conversion from RES1D to PI file (import to FEWS)
-  * Modification of MHYDRO setup file, in the form of a simple Python script
-  * Generating XML file containing definition of all time series in a Res1D file
+    * Conversion between DFS0 and PI files
+    * Conversion from RES1D to PI file (import to FEWS)
+    * Modification of MHYDRO setup file, in the form of a simple Python script
+    * Generating XML file containing definition of all time series in a Res1D file
 * Examples of how to use the exe files in FEWS (ModuleConfigFiles)
 * Simple FEWS configuration showing how to include the MIKE 1D engine in FEWS
 
@@ -49,7 +52,7 @@ Build all in Visual Studio. Then run the BuildBin.bat to create binary folders a
 BuildZip.bat to build zip files of each of the tools and place it to the FEWS config ModuleDataSetFiles folder.
 
 ## Installing
-The tools are self contained and independent of MIKE software. I.e. it is not required to install any MIKE software to use the tools. It does require that the [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) for Visual Studio 2017 or later is installed. They are often already installed, but if not, they must be installed.
+The tools are self contained and independent of MIKE software. I.e. it is not required to install any MIKE software to use the tools. It does require that the [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) for Visual Studio 2019 or later is installed. They are often already installed, but if not, they must be installed.
 
 ## Testing
 Install FEWS. Create FEWS project dir and copy there fews.exe and content of testdata dir. Modify sa_global.properties file and set MODEL_ROOT_DIR and FEWSMIKEHYDRO_DIR to the proper dir. Run FEWS and set FEWS Current system time to 12-1-2020. Test individual workflows. 
@@ -156,6 +159,7 @@ $locationId$          - used LocationId used for imported TS
 $parameterId$         - FEWS parameter Id
 $pi_name$             - name of FEWS import file
 ```
+
 ## Res1d2PI
 Import of TS from Res1D to FEWS database. Variables
 ```
@@ -170,6 +174,7 @@ Modify mhydro file and execute computation. Variables
 $mike_exe$            - full path to DHI.Mhydro.Application.exe
 $mike_model_dir$      - MIKE Hydro river setup root directory.
 $relative_setup_path$ - path to the mhydro file relative to the MIKE Hydro river setup root directory.
+```
 
 ## modify_and_runM11FF.xml
 Modify mike11 setup files and execute computation. Variables
@@ -180,8 +185,8 @@ $relative_setup_path$ - path to the sim11 file relative to the MIKE11 setup root
 $relative_hotstart_path$ - path to the hotstart file relative to the MIKE11 setup root directory.
 $relative_FF_path$ path to the ff (flood forecasting) file relative to the MIKE11 setup root directory.
 $relative_DA_path$ path to the da (data asimilation) file relative to the MIKE11 setup root directory.
-
 ```
+
 # Map files
 Map file defining mapping between MIKE and FEWS parameters and locations. For example 
 ```xml
