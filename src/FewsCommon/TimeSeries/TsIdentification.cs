@@ -16,6 +16,7 @@ namespace FewsCommon.TimeSeries
         private string _tsType = "";
         private string _ensembleId = "";
         private string _ensembleMemberId = "";
+        private string _itemName = "";
 
         /// 
         /// <param name="locationId">LocationId</param>
@@ -33,13 +34,14 @@ namespace FewsCommon.TimeSeries
             this._ensembleMemberId = ensembleMemberId ?? throw new ArgumentNullException(nameof(ensembleMemberId));
         }
 
-        public TsIdentification(TimeSeriesNS.TimeSeries ts)
+        public TsIdentification(TimeSeriesNS.TimeSeries ts, string itemName)
         {
             LocationId = ts.LocationId;
             ParmId = ts.ParameterId;
             TsType = ts.Type;
             EnsembleId = ts.EnsembleId;
             EnsembleMemberId = ts.EnsembleMemberId;
+            ItemName = itemName;
         }
 
         /// <summary>
@@ -62,5 +64,6 @@ namespace FewsCommon.TimeSeries
         /// EnsembleMemberId
         /// </summary>
         public string EnsembleMemberId { get => _ensembleMemberId; set => _ensembleMemberId = value; }
+        public string ItemName { get => _itemName; set => _itemName = value; }
     }
 }

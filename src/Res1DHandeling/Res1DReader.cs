@@ -111,6 +111,19 @@ namespace Res1DHandeling
             }
             return nodeList;
         }
+        public void GetStartEnd(ref DateTime start, ref DateTime end)
+        {
+            
+            if (!Loaded)
+            {
+                if (!LoadResults())
+                {
+                    return;
+                }
+            }
+            start = _resultData.StartTime;
+            end = _resultData.EndTime;
+        }
 
         public IList<string> GetBrancheGridPointNames()
         {
@@ -207,7 +220,7 @@ namespace Res1DHandeling
             ts.Y = resultGridPoint.Y;
             ts.Z = resultGridPoint.Z;
             var typeName = resultGridPoint.PointType.ToString();
-            ts.LocationId = $"{reach.Name} - {reach.GridPoints[elementIndex].Chainage} - {typeName}";
+            ts.LocationId = $"{reach.Name} - {reach.GridPoints[elementIndex].Chainage} - {typeName} - {reach.DataItems[itemPos].ItemId}";
             ts.TimeStep = new TimeSpan(1, 0, 0);
             if (_resultData.NumberOfTimeSteps > 1)
             {

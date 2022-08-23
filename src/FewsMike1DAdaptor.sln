@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateAllXML", "GenerateA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyMhydroFile", "ModifyMhydroFile\ModifyMhydroFile.csproj", "{B4A89790-DBF0-4912-8D68-71E5F0BDCDF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyMIKESetupFile", "ModifyMIKESetupFile\ModifyMIKESetupFile.csproj", "{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,14 @@ Global
 		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF5}.Release|x64.ActiveCfg = Release|Any CPU
 		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF5}.Release|x64.Build.0 = Release|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Debug|x64.Build.0 = Debug|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4A89790-DBF0-4912-8D68-71E5F0BDCDF6}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

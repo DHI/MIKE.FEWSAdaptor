@@ -44,20 +44,22 @@ namespace Dfs0Handeling
                 {
                     var array = ts.LocationId.Split('|');
                     var location = ts.LocationId;
+                    var itemName = ts.LocationId;
                     string fullName = Path.Combine(rootPath, relativePath);
                     if (array.Length > 1)
                     {
-                        fullName = Path.Combine(rootPath, array[0]);
-                    ts.LocationId = array[1];
+                        fullName = Path.Combine(rootPath, relativePath, array[0]);
+                        ts.LocationId = $"{array[1]}_{array[0]}";
+                        itemName = array[1];
                     }
                     else
                     {
                         if (!string.IsNullOrEmpty(relativePath))
                         {
-                        fullName = Path.Combine(rootPath, relativePath);
+                            fullName = Path.Combine(rootPath, relativePath);
+                        }
                     }
-                    }
-                    var tsIdentification = new TsIdentification(ts);
+                    var tsIdentification = new TsIdentification(ts, itemName);
                     if (!string.IsNullOrEmpty(prefix))
                     {
                         tsIdentification.LocationId = $"{prefix}_{tsIdentification.LocationId}";
@@ -68,13 +70,14 @@ namespace Dfs0Handeling
                     }
                     fileNames[fullName].Add(tsIdentification);
                 }
-      
+
             foreach (var file in fileNames)
             {
                 _WriteOneFile(file.Key, pi, file.Value, startTime, endTime, parameterType);
             }
             return true;
         }
+
         /// 
         /// <param name="fileName">Output DFS0 file path</param>
         /// <param name="pi">Memory data structure containing TS</param>
@@ -110,113 +113,117 @@ namespace Dfs0Handeling
             }
             allTimeSteps.Sort();
 
-            var fullTsList = new List<TimeSeries>();
-            DfsFactory factory = new DfsFactory();
-            DfsBuilder builder = DfsBuilder.Create("FEWS Adaptor", "FEWS Adaptor - Dfs0 writer", 10000);
-            builder.SetItemStatisticsType(StatType.RegularStat);
-            builder.SetDataType(0);
-            builder.SetGeographicalProjection(factory.CreateProjectionUndefined());
-            builder.SetItemStatisticsType(StatType.RegularStat);
-            IDfsTemporalAxis temporalAxis = factory.CreateTemporalNonEqCalendarAxis(DHI.Generic.MikeZero.eumUnit.eumUsec, allTimeSteps[0]);
-            builder.SetTemporalAxis(temporalAxis);            
-            foreach (var ident in list)
+            if (allTimeSteps.Count > 0)
             {
-                var tsList = pi.GetTS(ident);
-                foreach (var ts in tsList)
+                var fullTsList = new List<TimeSeries>();
+                DfsFactory factory = new DfsFactory();
+                DfsBuilder builder = DfsBuilder.Create("FEWS Adaptor", "FEWS Adaptor - Dfs0 writer", 10000);
+                builder.SetItemStatisticsType(StatType.RegularStat);
+                builder.SetDataType(0);
+                builder.SetGeographicalProjection(factory.CreateProjectionUndefined());
+                builder.SetItemStatisticsType(StatType.RegularStat);
+                IDfsTemporalAxis temporalAxis = factory.CreateTemporalNonEqCalendarAxis(DHI.Generic.MikeZero.eumUnit.eumUsec, allTimeSteps[0]);
+                builder.SetTemporalAxis(temporalAxis);
+                foreach (var ident in list)
                 {
-                    DfsDynamicItemBuilder item = builder.CreateDynamicItemBuilder();
-                    var itemEnum = eumItem.eumIItemUndefined;
-                    var unitEum = eumUnit.eumUUnitUndefined;
-                    var array = ts.ParameterId.Split(';');
-                    var itemStr = array[0];
-                    var unitStr = string.Empty;
-                    if (array.Count() > 1)
+                    var tsList = pi.GetTS(ident);
+                    foreach (var ts in tsList)
                     {
-                        unitStr = array[1];
-                    }
-                    if (!Enum.TryParse(itemStr, true, out itemEnum))
+                        DfsDynamicItemBuilder item = builder.CreateDynamicItemBuilder();
+                        var itemEnum = eumItem.eumIItemUndefined;
+                        var unitEum = eumUnit.eumUUnitUndefined;
+                        var array = ts.ParameterId.Split(';');
+                        var itemStr = array[0];
+
+                        var unitStr = string.Empty;
+                        if (array.Count() > 1)
+                        {
+                            unitStr = array[1];
+                        }
+                        if (!Enum.TryParse(itemStr, true, out itemEnum))
                         {
                             itemEnum = eumItem.eumIItemUndefined;
-                        }                    
-                    if (!Enum.TryParse(unitStr, true, out unitEum))
-                    {
-                        unitEum = eumUnit.eumUUnitUndefined;
+                        }
+                        if (!Enum.TryParse(unitStr, true, out unitEum))
+                        {
+                            unitEum = eumUnit.eumUUnitUndefined;
+                        }
+                        item.Set(ident.ItemName, eumQuantity.Create(itemEnum, unitEum), DfsSimpleType.Float);
+                        if (string.IsNullOrEmpty(parameterType))
+                        {
+                            item.SetValueType(DataValueType.Instantaneous);
+                        }
+                        else
+                        {
+                            switch (parameterType.ToLower())
+                            {
+                                case "instantaneous":
+                                    item.SetValueType(DataValueType.Instantaneous);
+                                    break;
+                                case "accumulated":
+                                    item.SetValueType(DataValueType.Accumulated);
+                                    break;
+                                case "meanstepbackward":
+                                    item.SetValueType(DataValueType.MeanStepBackward);
+                                    break;
+                                case "meanstepforward":
+                                    item.SetValueType(DataValueType.MeanStepForward);
+                                    break;
+                                case "stepaccumulated":
+                                    item.SetValueType(DataValueType.StepAccumulated);
+                                    break;
+                                default:
+                                    item.SetValueType(DataValueType.Instantaneous);
+                                    break;
+                            }
+                        }
+                        item.SetAxis(factory.CreateAxisEqD0());
+                        builder.AddDynamicItem(item.GetDynamicItemInfo());
+                        fullTsList.Add(ts);
                     }
-                    item.Set(ts.LocationId, eumQuantity.Create(itemEnum, unitEum), DfsSimpleType.Float);
-                    if (string.IsNullOrEmpty(parameterType))
+                }
+
+
+                builder.CreateFile(fileName);
+                using (IDfsFile file = builder.GetFile())
+                {
+                    if (fullTsList[0].MissVal.HasValue)
                     {
-                        item.SetValueType(DataValueType.Instantaneous);
+                        file.FileInfo.DeleteValueFloat = (float)fullTsList[0].MissVal.Value;
+                        file.FileInfo.DeleteValueDouble = fullTsList[0].MissVal.Value;
                     }
                     else
                     {
-                        switch (parameterType.ToLower())
-                        {
-                            case "instantaneous":
-                                item.SetValueType(DataValueType.Instantaneous);
-                                break;
-                            case "accumulated":
-                                item.SetValueType(DataValueType.Accumulated);
-                                break;
-                            case "meanstepbackward":
-                                item.SetValueType(DataValueType.MeanStepBackward);
-                                break;
-                            case "meanstepforward":
-                                item.SetValueType(DataValueType.MeanStepForward);
-                                break;
-                            case "stepaccumulated":
-                                item.SetValueType(DataValueType.StepAccumulated);
-                                break;
-                            default:
-                                item.SetValueType(DataValueType.Instantaneous);
-                                break;
-                        }
+                        file.FileInfo.DeleteValueFloat = -9999.9f;
+                        file.FileInfo.DeleteValueDouble = -9999.9;
                     }
-                    item.SetAxis(factory.CreateAxisEqD0());
-                    builder.AddDynamicItem(item.GetDynamicItemInfo());
-                    fullTsList.Add(ts);
-                }
-
-               
-            }
-            builder.CreateFile(fileName);
-            using (IDfsFile file = builder.GetFile())
-            {
-                if (fullTsList[0].MissVal.HasValue)
-                {
-                    file.FileInfo.DeleteValueFloat = (float)fullTsList[0].MissVal.Value;
-                    file.FileInfo.DeleteValueDouble = fullTsList[0].MissVal.Value;
-                }
-                else
-                {
-                    file.FileInfo.DeleteValueFloat = -9999.9f;
-                    file.FileInfo.DeleteValueDouble = -9999.9;
-                }
-                float[] oneStepValues = new float[1];
-                double noValue = file.FileInfo.DeleteValueFloat;
-                for (int i = 0; i < allTimeSteps.Count; i++)
-                {
-                    double doubleTime = (allTimeSteps[i] - allTimeSteps[0]).TotalSeconds;
-                    bool writeTimeStep = false;
-                    int k = 0;
-                    while (k < fullTsList.Count && !writeTimeStep)
-                    {                        
-                        double value = fullTsList[k].GetValue(allTimeSteps[i]);
-                        writeTimeStep = (Math.Abs(value - noValue) > double.Epsilon);
-                        k++;
-                    }
-                    if (writeTimeStep)
+                    float[] oneStepValues = new float[1];
+                    double noValue = file.FileInfo.DeleteValueFloat;
+                    for (int i = 0; i < allTimeSteps.Count; i++)
                     {
-                        for (int j = 0; j < fullTsList.Count; j++)
+                        double doubleTime = (allTimeSteps[i] - allTimeSteps[0]).TotalSeconds;
+                        bool writeTimeStep = false;
+                        int k = 0;
+                        while (k < fullTsList.Count && !writeTimeStep)
                         {
-                            double value = file.FileInfo.DeleteValueFloat;
-                            value = fullTsList[j].GetValue(allTimeSteps[i]);
-                            oneStepValues[0] = (float)value;
-                            file.WriteItemTimeStepNext(doubleTime, oneStepValues);
+                            double value = fullTsList[k].GetValue(allTimeSteps[i]);
+                            writeTimeStep = (Math.Abs(value - noValue) > double.Epsilon);
+                            k++;
+                        }
+                        if (writeTimeStep)
+                        {
+                            for (int j = 0; j < fullTsList.Count; j++)
+                            {
+                                double value = file.FileInfo.DeleteValueFloat;
+                                value = fullTsList[j].GetValue(allTimeSteps[i]);
+                                oneStepValues[0] = (float)value;
+                                file.WriteItemTimeStepNext(doubleTime, oneStepValues);
+                            }
                         }
                     }
                 }
+                Logger.AddLog(Logger.TypeEnum.Info, $"File {fileName} written successfully");
             }
-            Logger.AddLog(Logger.TypeEnum.Info, $"File {fileName} written successfully");
         }
     }
 }

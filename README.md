@@ -42,6 +42,7 @@ The adaptor tools supports working with ensemble time series in FEWS. For ensemb
 * GenerateAllXML : Generate XML file for all data in res1d file
 * Mhydro : Modify MHYDRO file
 * ModifyMhydroFile : Modify MHYDRO file
+* ModifyMIKESetupFile : Modify MIKE11, MHYDRO and 1D engine (MIKE+)
 
 ## Building
 Build all in Visual Studio. Then run the BuildBin.bat to create binary folders and 
@@ -169,6 +170,17 @@ Modify mhydro file and execute computation. Variables
 $mike_exe$            - full path to DHI.Mhydro.Application.exe
 $mike_model_dir$      - MIKE Hydro river setup root directory.
 $relative_setup_path$ - path to the mhydro file relative to the MIKE Hydro river setup root directory.
+
+## modify_and_runM11FF.xml
+Modify mike11 setup files and execute computation. Variables
+```
+$mike_exe$            - full path to mike11 executeble
+$mike_model_dir$      - MIKE11 setup root directory.
+$relative_setup_path$ - path to the sim11 file relative to the MIKE11 setup root directory.
+$relative_hotstart_path$ - path to the hotstart file relative to the MIKE11 setup root directory.
+$relative_FF_path$ path to the ff (flood forecasting) file relative to the MIKE11 setup root directory.
+$relative_DA_path$ path to the da (data asimilation) file relative to the MIKE11 setup root directory.
+
 ```
 # Map files
 Map file defining mapping between MIKE and FEWS parameters and locations. For example 

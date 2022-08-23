@@ -7,3 +7,4 @@ powershell.exe Compress-Archive bin\ModifyMhydroFile\*.* '%zipDir%\modify_and_ru
 powershell.exe Compress-Archive bin\MHydro\*.* '%zipDir%\modify_py Default.zip'
 powershell.exe Compress-Archive bin\PITodfs0\*.* '%zipDir%\PI2Dfs0 Default.zip'
 powershell.exe Compress-Archive bin\Res1DToPI\*.* '%zipDir%\Res1d2PI Default.zip' 
+powershell.exe Compress-Archive bin\ModifyMIKESetupFile\*.* '%zipDir%\modify_and_runM11FF Default.zip' 

@@ -8,8 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+
 namespace ModifyMhydroFile
 {
+    enum enumModelType
+    {
+        mikeHydro,
+        mike1D,
+        couple,
+        mikeFM
+    }
+
     class ModifyMhydroFile
     {
         static int Main(string[] args)
@@ -53,7 +62,7 @@ namespace ModifyMhydroFile
             return 0;
         }
 
-        private static int _ModifyFile(string path, DateTime start, DateTime end, DateTime tof)
+        private static int _ModifyFile(string path, DateTime start, DateTime end, DateTime tof, enumModelType modelType = enumModelType.mikeHydro)
         {
             string tempFile = Path.GetTempFileName();
             try
