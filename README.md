@@ -212,5 +212,24 @@ Map file defining mapping between MIKE and FEWS parameters and locations. For ex
 ```
 
 # DfsuToUGRID
-Convert DFSu file to the UGRID. Used for creating of the location or importing 
+Convert DFSu file to the UGRID. Used for creating of the location or convertin dfsu result file to be used in FEWS import activity. Variables.
+For creating of the location file
+```
+$dfsu_file_name$ Input Dfsu file name
+$netcdf_file_name$ Location file name
+$1$ indicating, that only geometry is taken from DFSu. Exported NetCdf needs to be placed to MapLayerFiles directory
+```
+
+For result export
+```
+$dfsu_file_name$ [mandatory] Input Dfsu file name
+$netcdf_file_name$ [mandatory] Location file name
+$write_only_geometry$ [optional] Write geometry UGRID  0 -  write full file, 1 - write only geometry to be used as geometry definition in FEWS. Default 0
+$item_number$ [optional] (1 - based) to be written from Dfsu file. Default 1
+$time_step_index$ [optional] (0 based) of the first time step from Dfsu to be saved in NetCdf. Default 0
+$load_every_step$ [optional]  Load every n step. Default 1
+$max_num_in_commit$ [optional] Maximun number of values in one commit. Can be used to optimize memory use / speed. Default 10000000
+```
+
+
 
