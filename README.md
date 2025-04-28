@@ -239,6 +239,18 @@ $max_num_in_commit$ [optional] Maximun number of values in one commit. Can be us
 ```
 Exported NetCDF file if imported to FEWS using importNetcdfActivity defined in module configuration.
 
+Mesh location definition
+
+```
+<irregular locationId="grid_Mesh_faces">
+    <netcdfFile>
+      <file>meshLocation.nc</file>
+      <geoDatum>EPSG:32646</geoDatum>
+      <meshTopologyVariableName>mesh2d</meshTopologyVariableName>
+      <staggerLocation>face</staggerLocation>
+    </netcdfFile>
+  </irregular>
+```
 
 # Map files
 Map file defining mapping between MIKE and FEWS parameters and locations. For example 
