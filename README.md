@@ -201,18 +201,9 @@ $relative_FF_path$ path to the ff (flood forecasting) file relative to the MIKE1
 $relative_DA_path$ path to the da (data asimilation) file relative to the MIKE11 setup root directory.
 ```
 
-# Map files
-Map file defining mapping between MIKE and FEWS parameters and locations. For example 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/idMap.xsd">
-	<parameter internal="H.obs" external="eumIWaterLevel;eumUmeter"/>
-	<location external="tide.dfs0" internal="Napa Tide boundary"/>
-</idMap>
-```
-
 # DfsuToUGRID
 Convert DFSu file to the UGRID. Used for creating of the location or convertin dfsu result file to be used in FEWS import activity. Variables.
+
 For creating of the location file
 ```
 $dfsu_file_name$ Input Dfsu file name
@@ -230,6 +221,17 @@ $time_step_index$ [optional] (0 based) of the first time step from Dfsu to be sa
 $load_every_step$ [optional]  Load every n step. Default 1
 $max_num_in_commit$ [optional] Maximun number of values in one commit. Can be used to optimize memory use / speed. Default 10000000
 ```
+Exported NetCDF file if imported to FEWS using importNetcdfActivity defined in module configuration.
 
+
+# Map files
+Map file defining mapping between MIKE and FEWS parameters and locations. For example 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/idMap.xsd">
+	<parameter internal="H.obs" external="eumIWaterLevel;eumUmeter"/>
+	<location external="tide.dfs0" internal="Napa Tide boundary"/>
+</idMap>
+```
 
 
