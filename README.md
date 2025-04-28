@@ -141,6 +141,19 @@ Location is after that used as DFS0 item name. Item Quantity (Item ad units) are
 The DFS DataValueType has the values Instantaneous, Accumulated, StepAccumulated, MeanStepBackward, MeanStepForward. Default is Instantaneous.
 
 
+## DfsuToNetCDF
+DfsuFileName [mandatory] Input Dfsu file name
+NetcdfFileName [mandatory] Location file name
+WriteOnlyGeometry [optional] Write geometry UGRID  0 -  write full file, 1 - write only geometry to be used as geometry definition in FEWS. Default 0
+ItemNumber [optional] (1 - based) to be written from Dfsu file. Default 1
+TimeStepIndex [optional] (0 based) of the first time step from Dfsu to be saved in NetCdf. Default 0
+LoadEveryStep [optional]  Load every n step. Default 1
+MaxNumInCommit$ [optional] Maximun number of values in one commit. Can be used to optimize memory use / speed. Default 10000000
+
+Comments:
+Different tools like QGIS, ParaView supporting this format. It is posible to animate NetCDF created from Dfsu in QGIS.
+Log file contain info about files, used and total time of the data processing. Those info can be used for the performance optimization using the start time load every step, and Maximun number of values in one commit.
+
 #	Module configuration files
 A set of module configuration files is provided as a template for the FEWS configuration.
 
@@ -201,7 +214,7 @@ $relative_FF_path$ path to the ff (flood forecasting) file relative to the MIKE1
 $relative_DA_path$ path to the da (data asimilation) file relative to the MIKE11 setup root directory.
 ```
 
-# DfsuToUGRID
+## dfsu_to_netcdf
 Convert DFSu file to the UGRID. Used for creating of the location or convertin dfsu result file to be used in FEWS import activity. Variables.
 
 For creating of the location file
