@@ -29,7 +29,7 @@ The following components are provided:
     * Modification of MHYDRO setup file, in the form of a simple Python script
     * Generating XML file containing definition of all time series in a Res1D file
     * Conversion of DFSu to NetCDF following UGRID Conventions
-* Examples of how to use the exe files in FEWS (ModuleConfigFiles) -> to be done for 2D adaptor
+* Examples of how to use the exe files in FEWS (ModuleConfigFiles) for 1D adaptor-> to be done for 2D adaptor
 * Simple FEWS configuration showing how to include the MIKE 1D engine in FEWS  -> to be done for 2D adaptor
 
 A setup in FEWS can be stored in two ways
