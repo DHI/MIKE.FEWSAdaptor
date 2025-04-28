@@ -142,6 +142,8 @@ The DFS DataValueType has the values Instantaneous, Accumulated, StepAccumulated
 
 
 ## DfsuToNetCDF
+This program convert Dfsu (MIKE 2D mesh results) to the NetCDF UGRID or create geometry, to be used as location.
+```
 DfsuFileName [mandatory] Input Dfsu file name
 NetcdfFileName [mandatory] Location file name
 WriteOnlyGeometry [optional] Write geometry UGRID  0 -  write full file, 1 - write only geometry to be used as geometry definition in FEWS. Default 0
@@ -149,6 +151,7 @@ ItemNumber [optional] (1 - based) to be written from Dfsu file. Default 1
 TimeStepIndex [optional] (0 based) of the first time step from Dfsu to be saved in NetCdf. Default 0
 LoadEveryStep [optional]  Load every n step. Default 1
 MaxNumInCommit$ [optional] Maximun number of values in one commit. Can be used to optimize memory use / speed. Default 10000000
+```
 
 Comments:
 Different tools like QGIS, ParaView supporting this format. It is posible to animate NetCDF created from Dfsu in QGIS.
