@@ -2,9 +2,9 @@
 The MIKE FEWS adaptor consist of a set of components for supporting integration of the MIKE models into the FEWS system.
 
 The adaptor is currently designed and tested for supporting MIKE Hydro River models and the MIKE 1D engine. Integration of MIKE+ and MIKE 11 models is also possible. It can also be used as a starting point for integration of other MIKE models into FEWS.
-
+MIKE 2D engine supports loading of the 2D unstructurized mesh from MIKE 2D result file DFSu into the NetCDF following UGRID Conventions. Such file can be imported to FEWS.
 ## Disclaimer
-The MIKE FEWS adaptor is provided as is. Issues and questions can be posted here on GitHub. Any support from DHI can be provided on a consultancy basis, i.e. it is not included in an SMA/subscription.
+The MIKE FEWS adaptor is provided as is. Issues and questions can be posted here on GitHub. Any support from DHI can be provided on a consultancy basis, i.e. it is not included in an SMA/subscription. 2D adaptor use Microsoft.Research.Science.Data lib.
 
 ## Background
 A MIKE Hydro River setup consist of several files. In the FEWS environment, the following steps 
@@ -18,6 +18,7 @@ are supported:
     * Time of forecast (for Data Assimilation runs)
 * Selected results (time series) computed by the engine and stored in a .res1d result file 
   can be imported to FEWS.
+* Importing DFSu (2D mesh) to FEWS 
 
 The following components are provided:
 * Libraries in form of .NET DLL's, providing support for
@@ -27,8 +28,9 @@ The following components are provided:
     * Conversion from RES1D to PI file (import to FEWS)
     * Modification of MHYDRO setup file, in the form of a simple Python script
     * Generating XML file containing definition of all time series in a Res1D file
-* Examples of how to use the exe files in FEWS (ModuleConfigFiles)
-* Simple FEWS configuration showing how to include the MIKE 1D engine in FEWS
+    * Conversion of DFSu to NetCDF following UGRID Conventions
+* Examples of how to use the exe files in FEWS (ModuleConfigFiles) for 1D adaptor-> to be done for 2D adaptor
+* Simple FEWS configuration showing how to include the MIKE 1D engine in FEWS  -> to be done for 2D adaptor
 
 A setup in FEWS can be stored in two ways
 * Checked out model setup. In this case the MIKE Hydro setup is stored in the directory structure
@@ -36,7 +38,7 @@ A setup in FEWS can be stored in two ways
   containing the required tools and scripts.
 * Model setup in FEWS database. In this case the whole MIKE Hydro setup is included as a zip file in the ModuleDataSetFile.
 
-The adaptor tools supports working with ensemble time series in FEWS. For ensemble handling see FEWS documentation.
+The 1D adaptor tools supports working with ensemble time series in FEWS. For ensemble handling see FEWS documentation.
 
 ## Tools included
 * dfs0ToPI : Convert dfs0 to FEWS PI format
@@ -46,16 +48,28 @@ The adaptor tools supports working with ensemble time series in FEWS. For ensemb
 * Mhydro : Modify MHYDRO file
 * ModifyMhydroFile : Modify MHYDRO file
 * ModifyMIKESetupFile : Modify MIKE11, MHYDRO and 1D engine (MIKE+)
+* DfsuToUGRID : Convert Dfsu (MIKE 2D mesh results) to the NetCDF UGRID.  
 
 ## Building
+1D adaptor
 Build all in Visual Studio. Then run the BuildBin.bat to create binary folders and 
 BuildZip.bat to build zip files of each of the tools and place it to the FEWS config ModuleDataSetFiles folder.
+
+2D adaptor
+Download Microsoft.Research.Science.Data.Build in  Visual Studio. BuildBin BuildZip.bat -> to be done for 2D. Currently do manual copy of all nessesarly files and zip it to be used in 
 
 ## Installing
 The tools are self contained and independent of MIKE software. I.e. it is not required to install any MIKE software to use the tools. It does require that the [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) for Visual Studio 2019 or later is installed. They are often already installed, but if not, they must be installed.
 
 ## Testing
-Install FEWS. Create FEWS project dir and copy there fews.exe and content of testdata dir. Modify sa_global.properties file and set MODEL_ROOT_DIR and FEWSMIKEHYDRO_DIR to the proper dir. Run FEWS and set FEWS Current system time to 12-1-2020. Test individual workflows. 
+
+Install FEWS. Create FEWS project dir and copy there fews.exe and content of testdata dir. Modify sa_global.properties file and set MODEL_ROOT_DIR and FEWSMIKEHYDRO_DIR to the proper dir. 
+1D adaptor test
+Run FEWS and set FEWS Current system time to 12-1-2020. Test individual workflows. 
+
+2D adaptor test
+Copy result file to the data dir. Eventually change file names  in configuration. Run DfsuToUGRID having third parameter 1 and generate location geometry. Copy generated UGRID file to MapLayerFiles.
+
 
 # Tools
 
@@ -127,6 +141,22 @@ Location is after that used as DFS0 item name. Item Quantity (Item ad units) are
 The DFS DataValueType has the values Instantaneous, Accumulated, StepAccumulated, MeanStepBackward, MeanStepForward. Default is Instantaneous.
 
 
+## DfsuToNetCDF
+This program convert Dfsu (MIKE 2D mesh results) to the NetCDF UGRID or create geometry, to be used as location.
+```
+DfsuFileName [mandatory] Input Dfsu file name
+NetcdfFileName [mandatory] Location file name
+WriteOnlyGeometry [optional] Write geometry UGRID  0 -  write full file, 1 - write only geometry to be used as geometry definition in FEWS. Default 0
+ItemNumber [optional] (1 - based) to be written from Dfsu file. Default 1
+TimeStepIndex [optional] (0 based) of the first time step from Dfsu to be saved in NetCdf. Default 0
+LoadEveryStep [optional]  Load every n step. Default 1
+MaxNumInCommit$ [optional] Maximun number of values in one commit. Can be used to optimize memory use / speed. Default 10000000
+```
+
+Comments:
+Different tools like QGIS, ParaView supporting this format. It is posible to animate NetCDF created from Dfsu in QGIS.
+Log file contain info about files, used and total time of the data processing. Those info can be used for the performance optimization using the start time load every step, and Maximun number of values in one commit.
+
 #	Module configuration files
 A set of module configuration files is provided as a template for the FEWS configuration.
 
@@ -187,6 +217,41 @@ $relative_FF_path$ path to the ff (flood forecasting) file relative to the MIKE1
 $relative_DA_path$ path to the da (data asimilation) file relative to the MIKE11 setup root directory.
 ```
 
+## dfsu_to_netcdf
+Convert DFSu file to the UGRID. Used for creating of the location or convertin dfsu result file to be used in FEWS import activity. Variables.
+
+For creating of the location file
+```
+$dfsu_file_name$ Input Dfsu file name
+$netcdf_file_name$ Location file name
+$1$ indicating, that only geometry is taken from DFSu. Exported NetCdf needs to be placed to MapLayerFiles directory
+```
+
+For result export
+```
+$dfsu_file_name$ [mandatory] Input Dfsu file name
+$netcdf_file_name$ [mandatory] Location file name
+$write_only_geometry$ [optional] Write geometry UGRID  0 -  write full file, 1 - write only geometry to be used as geometry definition in FEWS. Default 0
+$item_number$ [optional] (1 - based) to be written from Dfsu file. Default 1
+$time_step_index$ [optional] (0 based) of the first time step from Dfsu to be saved in NetCdf. Default 0
+$load_every_step$ [optional]  Load every n step. Default 1
+$max_num_in_commit$ [optional] Maximun number of values in one commit. Can be used to optimize memory use / speed. Default 10000000
+```
+Exported NetCDF file if imported to FEWS using importNetcdfActivity defined in module configuration.
+
+Mesh location definition
+
+```xml
+<irregular locationId="grid_Mesh_faces">
+    <netcdfFile>
+      <file>meshLocation.nc</file>
+      <geoDatum>EPSG:32646</geoDatum>
+      <meshTopologyVariableName>mesh2d</meshTopologyVariableName>
+      <staggerLocation>face</staggerLocation>
+    </netcdfFile>
+  </irregular>
+```
+
 # Map files
 Map file defining mapping between MIKE and FEWS parameters and locations. For example 
 ```xml
@@ -196,4 +261,5 @@ Map file defining mapping between MIKE and FEWS parameters and locations. For ex
 	<location external="tide.dfs0" internal="Napa Tide boundary"/>
 </idMap>
 ```
+
 
