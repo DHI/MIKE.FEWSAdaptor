@@ -20,7 +20,7 @@ namespace FewsCommon.TimeSeries
 
         /// 
         /// <param name="locationId">LocationId</param>
-        /// <param name="parmId">ParametrId (ItemInfo.Quantity.Item + ItemInfo.Quantity.
+        /// <param name="parmId">ParameterId (ItemInfo.Quantity.Item + ItemInfo.Quantity.
         /// Unit in MZ))</param>
         /// <param name="tsType">TS type. Default instantaneous.</param>
         /// <param name="ensembleId">EnsembleId</param>
@@ -49,7 +49,7 @@ namespace FewsCommon.TimeSeries
         /// </summary>
         public string LocationId { get => _locationId; set => _locationId = value; }
         /// <summary>
-        /// ParametrId (ItemInfo.Quantity.Item + ItemInfo.Quantity.Unit in MZ))
+        /// ParameterId (ItemInfo.Quantity.Item + ItemInfo.Quantity.Unit in MZ))
         /// </summary>
         public string ParmId { get => parmId; set => parmId = value; }
         /// <summary>

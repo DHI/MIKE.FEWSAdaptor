@@ -27,7 +27,7 @@ namespace FewsCommon
         }
         /// <summary>
         /// Add one threshold to Dictionary. ComposedId is created as composition of
-        /// Location, Parametr Id and  individual ThresholdId
+        /// Location, Parameter Id and  individual ThresholdId
         /// </summary>
         /// <param name="hresholdValue"></param>
         public bool AddThreshold(ThresholdValue hresholdValue)
@@ -75,12 +75,12 @@ namespace FewsCommon
             }
         }
         /// <summary>
-        /// Get threshold value based on LocationId, parameterId and tresholdId
+        /// Get threshold value based on LocationId, parameterId and thresholdId
         /// </summary>
         /// <param name="locationId">Location ID</param>
         /// <param name="parameterId">ParameterId (ItemInfo.Quantity.Item + ItemInfo.
         /// Quantity.Unit in MZ)</param>
-        /// <param name="thresholdId">TresholdId (name)</param>
+        /// <param name="thresholdId">ThresholdId (name)</param>
         public double GetThresholdValue(string locationId, string parameterId, string thresholdId)
         {
             var id = _CreateId(locationId, parameterId, thresholdId);

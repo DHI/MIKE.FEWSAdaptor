@@ -38,7 +38,7 @@ namespace FewsCommon
                         if (found) // 8-9 in the middle of ts
                         {
                             ts.Values.Add(pair.Key, new TSValue(ts.MissVal.Value, 9));
-                            Logger.AddLog(Logger.TypeEnum.Info, $"Value for {pair.Key.ToString("yyyy-MM-dd HH:mm:ss")} to be removed for statnion id {ts.LocationId} with name {ts.StationName}.");
+                            Logger.AddLog(Logger.TypeEnum.Info, $"Value for {pair.Key.ToString("yyyy-MM-dd HH:mm:ss")} to be removed for station id {ts.LocationId} with name {ts.StationName}.");
                         }
 
                         continue;
@@ -48,7 +48,7 @@ namespace FewsCommon
                     {
                         found = true;
                         ts.Values.Add(pair.Key, new TSValue(ts.MissVal.Value, 9));
-                        Logger.AddLog(Logger.TypeEnum.Info, $"Value for {pair.Key.ToString("yyyy-MM-dd HH:mm:ss")} to be removed for statnion id {ts.LocationId} with name {ts.StationName}.");
+                        Logger.AddLog(Logger.TypeEnum.Info, $"Value for {pair.Key.ToString("yyyy-MM-dd HH:mm:ss")} to be removed for station id {ts.LocationId} with name {ts.StationName}.");
                     }
 
                     if (pair.Value.Flag == 0 || pair.Value.Flag == 1) // original or rewritten
