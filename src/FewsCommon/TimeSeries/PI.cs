@@ -43,7 +43,7 @@ namespace FewsCommon.TimeSeriesNS
         }
 
         /// <summary>
-        /// Get TS based on properties. TS are be queried by location eventually parameter,
+        /// Get TS based on properties. TS are queried by location eventually parameter,
         /// type and ensemble identification
         /// </summary>
         /// <param name="locationId">Location Id</param>

@@ -23,7 +23,7 @@ namespace FewsCommon
             _parameters = new Dictionary<string, object>();
         }
         /// <summary>
-        /// Get modifiers (name and value) dictionaty
+        /// Get modifiers (name and value) dictionary
         /// </summary>
         public IDictionary<string, object> Getparameters()
         {
